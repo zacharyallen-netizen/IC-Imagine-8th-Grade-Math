@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 6: Functions & Linear Relationships — IC Imagine 8th Grade Math</title>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{--navy:#1E2D4F;--gold:#FFC107;--gold-dark:#e6ac00;--white:#FFFFFF;--gray-light:#F4F4F4;--royal:#0056B3;--navy-light:#2a3d6b;--correct:#16a34a;--incorrect:#dc2626;--hint:#d97706;--text:#1a1a2e;--muted:#64748b;--border:#e2e8f0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:#eef0f5;color:var(--text);min-height:100vh;}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:200;box-shadow:0 3px 16px rgba(0,0,0,.35);}
+.header-top{display:flex;align-items:center;padding:10px 20px;gap:14px;border-bottom:3px solid var(--gold);}
+.logo{width:46px;height:46px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:var(--navy);flex-shrink:0;}
+.htext h1{font-size:1.05rem;font-weight:800;}.htext p{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.6px;text-transform:uppercase;}
+.gc-btn{margin-left:auto;background:var(--gold);color:var(--navy);border:none;padding:8px 14px;border-radius:8px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.8rem;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:.2s;}
+.gc-btn:hover{background:var(--gold-dark);}
+.main-nav{display:flex;}.main-nav button{flex:1;padding:11px 6px;border:none;background:transparent;color:rgba(255,255,255,.65);font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:800;cursor:pointer;transition:.2s;border-bottom:3px solid transparent;text-transform:uppercase;letter-spacing:.5px;}
+.main-nav button:hover{color:white;background:rgba(255,255,255,.07);}.main-nav button.active{color:var(--gold);border-bottom-color:var(--gold);}
+.sub-nav{background:var(--navy-light);display:flex;overflow-x:auto;scrollbar-width:none;padding:0 8px;}.sub-nav::-webkit-scrollbar{display:none;}
+.sub-nav button{padding:9px 14px;border:none;background:transparent;color:rgba(255,255,255,.55);font-family:'Nunito',sans-serif;font-size:.78rem;font-weight:700;cursor:pointer;transition:.2s;white-space:nowrap;border-bottom:2px solid transparent;}
+.sub-nav button:hover{color:white;}.sub-nav button.active{color:var(--gold);border-bottom-color:var(--gold);}
+main{max-width:100%;margin:0 auto;padding:24px 16px 120px;}
+.page{display:none;}.page.active{display:block;}
+.card{background:white;border-radius:14px;padding:24px;margin-bottom:18px;box-shadow:0 2px 10px rgba(30,45,79,.07);border:1px solid var(--border);}
+.card-title{font-size:1.4rem;font-weight:900;color:var(--navy);margin-bottom:4px;}
+.note-box{background:var(--gray-light);border-radius:10px;padding:16px 18px;margin:14px 0;border-left:4px solid var(--navy);}
+.note-box.important{border-left-color:var(--gold);background:#fffbeb;}.note-box.warning{border-left-color:var(--incorrect);background:#fef2f2;}.note-box.hint{border-left-color:var(--hint);background:#fffbeb;}
+.note-box h4{font-weight:800;font-size:.9rem;margin-bottom:6px;color:var(--navy);}.note-box.important h4{color:#92400e;}.note-box.warning h4{color:var(--incorrect);}
+.definition{display:flex;gap:12px;align-items:flex-start;background:#f0f4ff;border-radius:10px;padding:14px 16px;margin:12px 0;}
+.def-label{background:var(--navy);color:white;border-radius:6px;padding:4px 10px;font-size:.75rem;font-weight:800;white-space:nowrap;flex-shrink:0;}
+.formula-box{background:var(--navy);color:white;border-radius:10px;padding:16px 20px;margin:14px 0;text-align:center;}
+.formula-box .formula{font-size:1.4rem;font-weight:700;font-family:'Lexend',sans-serif;color:var(--gold);}
+.formula-box p{font-size:.82rem;color:rgba(255,255,255,.75);margin-top:6px;}
+.nt{width:100%;border-collapse:collapse;margin:14px 0;font-size:.88rem;}
+.nt th{background:var(--navy);color:white;padding:10px 12px;text-align:left;font-weight:700;}
+.nt td{padding:9px 12px;border-bottom:1px solid var(--border);}
+.nt tr:nth-child(even) td{background:var(--gray-light);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
+@media(max-width:600px){.two-col{grid-template-columns:1fr;}}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:600px){.three-col{grid-template-columns:1fr;}}
+.col-card{background:var(--gray-light);border-radius:10px;padding:14px;border-top:3px solid var(--navy);}
+.col-card.gold{border-top-color:var(--gold);}.col-card.royal{border-top-color:var(--royal);}
+.col-card h4{font-weight:800;font-size:.9rem;color:var(--navy);margin-bottom:8px;}
+/* PROBLEMS */
+.problem{background:white;border-radius:12px;padding:20px;margin-bottom:14px;border:1px solid var(--border);box-shadow:0 1px 6px rgba(0,0,0,.05);}
+.problem-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--navy);color:white;border-radius:50%;font-size:.8rem;font-weight:800;margin-right:8px;flex-shrink:0;}
+.problem-text{font-weight:700;font-size:.95rem;margin-bottom:14px;display:flex;align-items:flex-start;}
+.problem-text span{line-height:1.5;}
+.sub-part{margin:10px 0 10px 18px;padding-left:16px;border-left:2px solid var(--border);}
+.sub-part p{font-weight:700;font-size:.88rem;margin-bottom:8px;}
+input.ans{border:2px solid var(--border);border-radius:8px;padding:8px 12px;font-family:'Nunito',sans-serif;font-size:.95rem;font-weight:600;color:var(--text);width:100%;max-width:280px;transition:.2s;outline:none;}
+input.ans:focus{border-color:var(--navy);}
+input.ans.correct{border-color:var(--correct);background:#f0fdf4;}
+input.ans.wrong{border-color:var(--incorrect);background:#fef2f2;}
+select.ans{border:2px solid var(--border);border-radius:8px;padding:8px 12px;font-family:'Nunito',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);background:white;outline:none;cursor:pointer;transition:.2s;}
+select.ans:focus{border-color:var(--navy);}
+select.ans.correct{border-color:var(--correct);background:#f0fdf4;}
+select.ans.wrong{border-color:var(--incorrect);background:#fef2f2;}
+.check-btn{background:var(--navy);color:white;border:none;border-radius:8px;padding:9px 18px;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:800;cursor:pointer;transition:.2s;margin-top:12px;}
+.check-btn:hover{background:var(--navy-light);}
+.check-btn.gold{background:var(--gold);color:var(--navy);}
+.check-btn.gold:hover{background:var(--gold-dark);}
+.check-btn.green{background:var(--correct);color:white;}
+.feedback{margin-top:10px;padding:10px 14px;border-radius:8px;font-size:.88rem;font-weight:700;display:none;}
+.feedback.show{display:block;}
+.feedback.ok{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;}
+.feedback.bad{background:#fef2f2;color:#991b1b;border:1px solid #fecaca;}
+.feedback.warn{background:#fffbeb;color:#92400e;border:1px solid #fde68a;}
+.mc-options{display:flex;flex-direction:column;gap:8px;margin:10px 0;}
+.mc-opt{display:flex;align-items:center;gap:10px;padding:10px 14px;border:2px solid var(--border);border-radius:9px;cursor:pointer;transition:.2s;font-weight:600;font-size:.9rem;}
+.mc-opt:hover{border-color:var(--navy);background:#f0f4ff;}
+.mc-opt.selected{border-color:var(--navy);background:#f0f4ff;}
+.mc-opt.correct{border-color:var(--correct);background:#f0fdf4;color:#166534;}
+.mc-opt.wrong{border-color:var(--incorrect);background:#fef2f2;color:#991b1b;}
+.mc-opt input[type=radio]{accent-color:var(--navy);width:16px;height:16px;}
+/* DESMOS */
+.desmos-container{width:100%;height:360px;border-radius:12px;overflow:hidden;border:2px solid var(--border);margin:14px 0;position:relative;}
+.desmos-label{font-size:.78rem;font-weight:800;color:var(--muted);margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.desmos-label.student{color:var(--royal);}
+.reveal-btn{background:white;border:2px solid var(--royal);color:var(--royal);border-radius:8px;padding:7px 14px;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;margin-top:6px;}
+.reveal-btn:hover{background:var(--royal);color:white;}
+/* SHAPE SELECTOR */
+.shape-selector{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0;}
+@media(max-width:580px){.shape-selector{grid-template-columns:repeat(2,1fr);}}
+.shape-opt{border:2px solid var(--border);border-radius:12px;padding:8px;cursor:pointer;transition:.2s;text-align:center;background:white;}
+.shape-opt:hover{border-color:var(--navy);background:#f0f4ff;transform:translateY(-2px);}
+.shape-opt.selected{border-color:var(--navy);background:#f0f4ff;box-shadow:0 0 0 3px rgba(30,45,79,.15);}
+.shape-opt.correct{border-color:var(--correct);background:#f0fdf4;}
+.shape-opt.wrong{border-color:var(--incorrect);background:#fef2f2;}
+.shape-opt p{font-size:.75rem;font-weight:800;margin-top:6px;color:var(--navy);}
+.shape-opt svg{display:block;width:100%;height:80px;}
+/* NOTES STYLES */
+.steps{counter-reset:step;list-style:none;margin:14px 0;}
+.steps li{counter-increment:step;display:flex;gap:12px;margin-bottom:12px;align-items:flex-start;}
+.steps li::before{content:counter(step);min-width:26px;height:26px;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;flex-shrink:0;margin-top:1px;}
+.example{background:#f0f4ff;border:1px solid #c7d2fe;border-radius:10px;padding:16px;margin:14px 0;}
+.example h4{color:var(--royal);font-weight:800;margin-bottom:8px;font-size:.9rem;}
+.worked-steps{background:white;border-radius:8px;padding:12px;margin-top:10px;border:1px solid var(--border);}
+.worked-steps p{font-size:.88rem;padding:5px 0;border-bottom:1px solid var(--border);line-height:1.6;}
+.worked-steps p:last-child{border:none;}.worked-steps .result{color:var(--correct);font-weight:800;}
+.kw-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
+.kw-row:last-child{border:none;}.kw-tag{background:var(--navy);color:white;border-radius:6px;padding:4px 10px;font-size:.78rem;font-weight:800;white-space:nowrap;}
+.kw-arrow{font-size:1.1rem;color:var(--gold);flex-shrink:0;}.kw-desc{font-size:.88rem;font-weight:600;}
+.sec-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.sec-badge{background:var(--gold);color:var(--navy);width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;flex-shrink:0;}
+.sec-header h2{font-size:1.3rem;font-weight:900;color:var(--navy);}.sec-header p{font-size:.8rem;color:var(--muted);font-weight:600;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:14px 0;}
+.vocab-card{background:white;border:2px solid var(--border);border-radius:10px;padding:12px;transition:.2s;}
+.vocab-card:hover{border-color:var(--gold);}.vocab-card .term{font-weight:900;font-size:.9rem;color:var(--navy);margin-bottom:4px;}
+.vocab-card .def{font-size:.8rem;color:var(--muted);line-height:1.4;}
+.chip{display:inline-block;background:var(--gray-light);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:.78rem;font-weight:700;margin:3px;color:var(--navy);}
+.chip.green{background:#f0fdf4;border-color:#bbf7d0;color:#166534;}
+.chip.red{background:#fef2f2;border-color:#fecaca;color:#991b1b;}
+.chip.gold{background:#fffbeb;border-color:#fde68a;color:#92400e;}
+textarea.ans-text{width:100%;border:2px solid var(--border);border-radius:8px;padding:10px 12px;font-family:'Nunito',sans-serif;font-size:.9rem;font-weight:600;resize:vertical;min-height:80px;outline:none;}
+textarea.ans-text:focus{border-color:var(--navy);}
+svg{max-width:100%;height:auto;}
+/* AI TUTOR */
+#ai-bubble{position:fixed;bottom:24px;right:24px;z-index:500;}
+#ai-toggle{width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--navy);border:none;cursor:pointer;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:.2s;display:flex;align-items:center;justify-content:center;}
+#ai-toggle:hover{transform:scale(1.08);}
+#ai-panel{position:absolute;bottom:74px;right:0;width:360px;background:white;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.2);border:1px solid var(--border);display:none;flex-direction:column;overflow:hidden;max-height:520px;}
+#ai-panel.open{display:flex;}
+.ai-header{background:var(--navy);color:white;padding:14px 16px;display:flex;align-items:center;gap:10px;}
+.ai-avatar{width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ai-header h3{font-size:.95rem;font-weight:800;}.ai-header p{font-size:.72rem;color:var(--gold);font-weight:600;}
+#ai-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:200px;max-height:340px;}
+.msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:.85rem;line-height:1.5;font-weight:600;}
+.msg.user{background:#f0f4ff;border:1px solid #c7d2fe;align-self:flex-end;border-bottom-right-radius:4px;}
+.msg.bot{background:var(--gray-light);border:1px solid var(--border);align-self:flex-start;border-bottom-left-radius:4px;}
+.msg.bot.thinking{color:var(--muted);font-style:italic;}
+.ai-input-row{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);}
+#ai-input{flex:1;border:2px solid var(--border);border-radius:9px;padding:9px 12px;font-family:'Nunito',sans-serif;font-size:.85rem;font-weight:600;outline:none;}
+#ai-input:focus{border-color:var(--navy);}
+#ai-send{background:var(--navy);color:white;border:none;border-radius:9px;padding:9px 14px;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;transition:.2s;}
+#ai-send:hover{background:var(--navy-light);}
+#ai-send:disabled{opacity:.5;cursor:not-allowed;}
+@media(max-width:480px){#ai-panel{width:calc(100vw - 32px);right:-8px;}}
+
+nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1000;border-bottom:3px solid #FFC107}
+.nav-container{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav-title{font-family:'Arvo',serif;font-size:0.9em;margin-right:auto;font-weight:700;color:#FFC107}
+.nav-title span{color:#fff}
+.nb{font-family:'Inter',sans-serif;font-size:0.75em;font-weight:bold;padding:7px 12px;background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.3);border-radius:4px;color:#fff;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s}
+.nb:hover{border-color:#FFC107;color:#FFC107;background:rgba(255,193,7,0.15)}
+.nb.active{background:#FFC107;border-color:#FFC107;color:#1E2D4F;font-weight:700}
+.page-wrap{max-width:100%;margin:0 auto;padding:20px 15px 80px}
+.tabs{display:flex;gap:5px;flex-wrap:nowrap;margin-bottom:0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:thin}
+.tab-btn{font-family:'Arvo',serif;font-size:0.82em;padding:9px 14px;background:#fff;border:3px solid #cdd5e0;border-bottom:none;border-radius:8px 8px 0 0;cursor:pointer;color:#555;transition:all .2s;white-space:nowrap}
+.tab-btn.active{background:#1E2D4F;border-color:#1E2D4F;color:#FFC107}
+.tab-btn:hover:not(.active){border-color:#1E2D4F;color:#1E2D4F}
+.tab-pane{display:none;background:#fff;border-radius:0 10px 10px 10px;border:3px solid #1E2D4F;padding:20px}
+.tab-pane.active{display:block}
+.page-hdr{background:linear-gradient(135deg,#1E2D4F,#0d1f3f);border-radius:12px;padding:18px 22px;margin-bottom:18px;border:3px solid #FFC107}
+.page-hdr h1{font-family:'Arvo',serif;color:#FFC107;font-size:1.2em;margin-bottom:4px}
+.page-hdr p{color:#b8c8e8;font-size:0.88em}
+.practice-cta{text-align:center;margin:20px 0;padding:18px;background:linear-gradient(135deg,#1E2D4F,#0056B3);border-radius:12px;border:3px solid #FFC107}
+.practice-cta .cta-title{font-family:'Arvo',serif;font-size:1.1em;color:#FFC107;margin-bottom:8px}
+.practice-cta .cta-desc{color:#fff;margin-bottom:14px;font-size:0.95em}
+.practice-cta a{display:inline-block;padding:10px 24px;background:#FFC107;color:#1E2D4F;font-weight:bold;font-family:'Arvo',serif;border-radius:8px;text-decoration:none;font-size:0.95em;margin:4px}
+.practice-cta a:hover{background:#ffca2c;transform:translateY(-1px)}
+
+.page { display: block !important; }
+</style>
+</head>
+<body>
+<nav class="top-nav">
+<div class="nav-container">
+  <span class="nav-title">🦅 <span>IC Imagine</span> 8th Grade Math</span>
+  <a class="nb" href="index.html">🏠 Home</a>
+  <a class="nb" href="unit1.html">U1</a>
+  <a class="nb" href="unit2.html">U2</a>
+  <a class="nb" href="unit3.html">U3</a>
+  <a class="nb" href="unit4.html">U4</a>
+  <a class="nb" href="unit5.html">U5</a>
+  <a class="nb active" href="unit6.html">U6</a>
+  <a class="nb" href="unit7.html">U7</a>
+  <a class="nb" href="unit8.html">U8</a>
+  <a class="nb" href="fluency.html">⚡ Fluency</a>
+  <a class="nb" href="volume.html">📦 Vol</a>
+</div>
+</nav>
+<div class="page-wrap">
+<div class="page-hdr">
+  <h1>📈 Unit 6: Functions &amp; Linear Relationships</h1>
+  <p>Functions · Slope · y = mx + b · Systems · NC.8.F.1–5 · NC.8.EE.5–8</p>
+</div>
+<div class="tabs">
+  <button class="tab-btn active" onclick="openTab('u6t1',this)">6.1 Functions</button>
+  <button class="tab-btn" onclick="openTab('u6t2',this)">6.2 Slope</button>
+  <button class="tab-btn" onclick="openTab('u6t3',this)">6.3 Tables→Eq</button>
+  <button class="tab-btn" onclick="openTab('u6t4',this)">6.4 Real-World</button>
+  <button class="tab-btn" onclick="openTab('u6t5',this)">6.5 Comparing</button>
+  <button class="tab-btn" onclick="openTab('u6t6',this)">6.6 Qualitative</button>
+  <button class="tab-btn" onclick="openTab('u6t7',this)">6.7 Systems</button>
+  <button class="tab-btn" onclick="openTab('u6rev',this)">📝 Review & Error Analysis</button>
+
+</div>
+<!-- ═══ 6.1 INTRODUCTION TO FUNCTIONS ═══ -->
+<div id="u6t1" class="tab-pane active">
+<div class="lesson-section" style="border-color:#22AC00">
+<h2 style="color:#22AC00">6.1 Introduction to Functions</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.F.1 — Understand that a function is a rule that assigns to each input exactly one output.</em></div>
+
+<h3 style="color:#1E2D4F">What is a Function?</h3>
+<p style="margin-bottom:14px;line-height:1.6">A <strong>function</strong> is a relation (set of ordered pairs) in which every input (x) has only one corresponding output (y) value. Functions can be represented in different ways.</p>
+
+<h3 style="color:#FFC107">Functions as Ordered Pairs, Tables, and Mapping</h3>
+<p style="margin-bottom:10px;line-height:1.6">For these three representations, the input and output values are listed separately.</p>
+<div class="lesson-notes"><ul>
+<li><strong>Ordered Pairs</strong> represent the related inputs and outputs as a list of coordinate pairs.</li>
+<li><strong>Mappings</strong> use arrows to indicate the relationship between input and output values.</li>
+<li><strong>Tables</strong> display related input and output pairs in rows and columns.</li>
+</ul></div>
+
+<div class="diagram-box">
+<svg width="520" height="170" viewBox="0 0 520 170">
+<text x="85" y="18" fill="#1E2D4F" font-family="Arvo" font-size="12" text-anchor="middle" font-weight="bold">Ordered Pairs</text>
+<text x="85" y="42" fill="#1a1a24" font-size="13" text-anchor="middle">(x, y)</text>
+<text x="85" y="65" fill="#1E2D4F" font-size="12" text-anchor="middle">(−2, 3)</text>
+<text x="85" y="85" fill="#1E2D4F" font-size="12" text-anchor="middle">(−1, 2)</text>
+<text x="85" y="105" fill="#1E2D4F" font-size="12" text-anchor="middle">(2, 1)</text>
+<text x="85" y="125" fill="#1E2D4F" font-size="12" text-anchor="middle">(3, 1)</text>
+<!-- Mapping -->
+<text x="260" y="18" fill="#1E2D4F" font-family="Arvo" font-size="12" text-anchor="middle" font-weight="bold">Mapping</text>
+<text x="220" y="42" fill="#1E2D4F" font-size="11" text-anchor="middle" font-weight="bold">Input</text>
+<text x="300" y="42" fill="#1E2D4F" font-size="11" text-anchor="middle" font-weight="bold">Output</text>
+<text x="220" y="65" fill="#1E2D4F" font-size="12" text-anchor="middle">−2</text>
+<text x="220" y="85" fill="#1E2D4F" font-size="12" text-anchor="middle">−1</text>
+<text x="220" y="105" fill="#1E2D4F" font-size="12" text-anchor="middle">2</text>
+<text x="220" y="125" fill="#1E2D4F" font-size="12" text-anchor="middle">3</text>
+<text x="300" y="65" fill="#22AC00" font-size="12" text-anchor="middle">3</text>
+<text x="300" y="85" fill="#22AC00" font-size="12" text-anchor="middle">2</text>
+<text x="300" y="105" fill="#22AC00" font-size="12" text-anchor="middle">1</text>
+<line x1="235" y1="61" x2="285" y2="61" stroke="#FFC107" stroke-width="1.5" marker-end="url(#arr6)"/>
+<line x1="235" y1="81" x2="285" y2="81" stroke="#FFC107" stroke-width="1.5" marker-end="url(#arr6)"/>
+<line x1="235" y1="101" x2="285" y2="101" stroke="#FFC107" stroke-width="1.5" marker-end="url(#arr6)"/>
+<line x1="235" y1="121" x2="285" y2="101" stroke="#FFC107" stroke-width="1.5" marker-end="url(#arr6)"/>
+<defs><marker id="arr6" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#FFC107"/></marker></defs>
+<!-- Table -->
+<text x="430" y="18" fill="#1E2D4F" font-family="Arvo" font-size="12" text-anchor="middle" font-weight="bold">Table</text>
+<rect x="380" y="28" width="50" height="22" fill="rgba(30,45,79,0.15)" stroke="#1E2D4F" stroke-width="1"/>
+<rect x="430" y="28" width="50" height="22" fill="rgba(30,45,79,0.15)" stroke="#1E2D4F" stroke-width="1"/>
+<text x="405" y="44" fill="#1E2D4F" font-size="11" text-anchor="middle" font-weight="bold">x</text>
+<text x="455" y="44" fill="#1E2D4F" font-size="11" text-anchor="middle" font-weight="bold">y</text>
+<rect x="380" y="50" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/><rect x="430" y="50" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/>
+<text x="405" y="66" fill="#1a1a24" font-size="11" text-anchor="middle">−2</text><text x="455" y="66" fill="#1a1a24" font-size="11" text-anchor="middle">3</text>
+<rect x="380" y="72" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/><rect x="430" y="72" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/>
+<text x="405" y="88" fill="#1a1a24" font-size="11" text-anchor="middle">−1</text><text x="455" y="88" fill="#1a1a24" font-size="11" text-anchor="middle">2</text>
+<rect x="380" y="94" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/><rect x="430" y="94" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/>
+<text x="405" y="110" fill="#1a1a24" font-size="11" text-anchor="middle">2</text><text x="455" y="110" fill="#1a1a24" font-size="11" text-anchor="middle">1</text>
+<rect x="380" y="116" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/><rect x="430" y="116" width="50" height="22" fill="none" stroke="#cdd5e0" stroke-width="1"/>
+<text x="405" y="132" fill="#1a1a24" font-size="11" text-anchor="middle">3</text><text x="455" y="132" fill="#1a1a24" font-size="11" text-anchor="middle">1</text>
+</svg>
+</div>
+
+<div class="warning-box"><strong>⚠️ Important:</strong> If any input (x) has more than one output (y), it is NOT a function!</div>
+
+<h3 style="color:#FFC107">Functions as Graphs</h3>
+<p style="margin-bottom:10px;line-height:1.6">Functions can also be represented by graphs of these values.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+<div class="key-concept" style="border-color:#1E2D4F"><strong style="color:#1E2D4F">Discrete</strong><br>Individual, separate points — values are counted (e.g., number of tickets sold).</div>
+<div class="key-concept" style="border-color:#0056B3"><strong style="color:#0056B3">Continuous</strong><br>An unbroken line or curve — values flow without interruption (e.g., temperature over time).</div>
+</div>
+<div class="warning-box"><strong>⚠️ Vertical Line Test:</strong> If a vertical line can be drawn anywhere on a graph and crosses it in <strong>two or more places</strong>, the relation is NOT a function.</div>
+
+<h3 style="color:#FFC107">Functions as Equations</h3>
+<p style="margin-bottom:10px;line-height:1.6"><em>Functions can also be represented by equations.</em> The equation is sometimes referred to as the <strong>Function Rule</strong>.</p>
+<p style="margin-bottom:10px">Example: y = ½x + 4</p>
+<p style="margin-bottom:10px;line-height:1.6">Sometimes, instead of using <em>y</em> to represent the output, equations will use <strong>Function Notation</strong> and replace y with f(x) — read as <em>"f of x"</em>.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+<div style="background:rgba(30,45,79,0.08);padding:12px;border-radius:6px;"><strong>Standard form:</strong><br><span style="font-size:1.1em;color:#1E2D4F;font-weight:bold">y = 2x + 4</span></div>
+<div style="background:rgba(255,193,7,0.1);padding:12px;border-radius:6px;"><strong>Function Notation:</strong><br><span style="font-size:1.1em;color:#FFC107;font-weight:bold">f(x) = 2x + 4</span></div>
+</div>
+<div class="key-concept"><strong>🔑 Using Function Notation:</strong> f(3) means "find the output when x = 3." If f(x) = 2x + 4, then f(3) = 2(3) + 4 = 10.</div>
+<div class="warning-box"><strong>⚠️ Important:</strong> If an equation has y in the denominator or uses y², it is NOT a function. Vertical lines (e.g., x = 6) are NOT functions. Horizontal lines (e.g., y = 7) ARE functions.<br><br><span style="color:#cc2222">Examples of NON-functions: 2x + 3y = 4/y &nbsp; or &nbsp; x² + y² = 9</span></div>
+
+<h3 style="color:#1E2D4F">Evaluating Functions with Equations</h3>
+<p style="margin-bottom:10px;line-height:1.6">To evaluate a function, substitute the given input into the equation to determine the corresponding output. <strong>Always use parentheses when substituting!</strong></p>
+<div class="example-box"><h4>Example: For f(x) = 3x − 3, find f(2)</h4>
+<div class="example-step">f(2) = 3(2) − 3</div>
+<div class="example-step">f(2) = 6 − 3</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>f(2) = 3 ✓</strong></div>
+</div>
+
+<h3 style="color:#1E2D4F">Evaluating Functions with Graphs</h3>
+<p style="margin-bottom:10px;line-height:1.6">For graphs, find the input (x) value on the x-axis, then move directly up or down to locate where it intersects the graph. The corresponding y-value is your output.</p>
+<div class="example-box"><h4>Example: Given f(x), evaluate f(−3)</h4>
+<div class="example-step">Find −3 on the x-axis. Move up to where the graph intersects at (−3, 2).</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>f(−3) = 2 ✓</strong></div>
+</div>
+
+<h3 style="color:#FFC107">Domain and Range</h3>
+<p style="margin-bottom:10px;line-height:1.6">Every function has a domain and a range. We list these values in { } braces, or describe them using an inequality.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+<div style="background:rgba(30,45,79,0.12);padding:14px;border-radius:8px;border:2px solid #1E2D4F;"><strong style="color:#1E2D4F;font-size:1.1em">DOMAIN</strong><br>All Input (x) values<br><em>"What x-values are allowed?"</em></div>
+<div style="background:rgba(255,193,7,0.12);padding:14px;border-radius:8px;border:2px solid #FFC107;"><strong style="color:#FFC107;font-size:1.1em">RANGE</strong><br>All Output (y) values<br><em>"What y-values result?"</em></div>
+</div>
+
+<h3 style="color:#1E2D4F">Increasing and Decreasing Behavior</h3>
+<p style="margin-bottom:10px;line-height:1.6">When looking at a graph, describe the function behavior moving from left to right.</p>
+<table class="master-table" style="width:100%;margin-bottom:14px;border-collapse:collapse;">
+<tr style="background:rgba(30,45,79,0.12)"><th style="padding:8px;border:1px solid #cdd5e0;text-align:left">Direction</th><th style="padding:8px;border:1px solid #cdd5e0">Graph Behavior</th><th style="padding:8px;border:1px solid #cdd5e0">What It Means</th></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#22AC00;font-weight:bold">Increasing ↗</td><td style="padding:8px;border:1px solid #cdd5e0">Goes UP left to right</td><td style="padding:8px;border:1px solid #cdd5e0">Output (y) gets larger as input (x) increases</td></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#cc2222;font-weight:bold">Decreasing ↘</td><td style="padding:8px;border:1px solid #cdd5e0">Goes DOWN left to right</td><td style="padding:8px;border:1px solid #cdd5e0">Output (y) gets smaller as input (x) increases</td></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#FFC107;font-weight:bold">Constant →</td><td style="padding:8px;border:1px solid #cdd5e0">Stays flat / horizontal</td><td style="padding:8px;border:1px solid #cdd5e0">Output (y) does not change</td></tr>
+</table>
+<div class="key-concept"><strong>🔑 Note:</strong> A single function can have multiple behaviors — decreasing, then constant, then decreasing again, then increasing.</div>
+</div>
+</div>
+
+<!-- ═══ 6.2 LINEAR FUNCTIONS AND SLOPE ═══ -->
+<div id="u6t2" class="tab-pane">
+<div class="lesson-section" style="border-color:#1E2D4F">
+<h2 style="color:#1E2D4F">6.2 Linear Functions and Slope</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.F.3 — Interpret y = mx + b as defining a linear function. NC.8.F.4 — Determine rate of change and initial value.</em></div>
+
+<p style="margin-bottom:10px;line-height:1.6">There are many different types of functions, but the most common is the <strong>Linear Function</strong>. A Linear Function has a <strong>constant rate of change</strong>. When graphed, it produces a straight line. We use the term <strong>slope</strong> to describe the rate of change.</p>
+
+<h3 style="color:#FFC107">Slope</h3>
+<p style="margin-bottom:10px;line-height:1.6">Slope is the ratio of the <strong>vertical change (Δy)</strong> to the <strong>horizontal change (Δx)</strong> — often called "rise over run."</p>
+<div style="text-align:center;font-size:1.3em;color:#FFC107;font-weight:bold;margin:14px 0;font-family:Arvo,serif">slope = Δy / Δx = (y₂ − y₁) / (x₂ − x₁)</div>
+
+<h3 style="color:#1E2D4F">Four Types of Slope</h3>
+<table class="master-table" style="width:100%;margin-bottom:14px;border-collapse:collapse;">
+<tr style="background:rgba(30,45,79,0.12)"><th style="padding:8px;border:1px solid #cdd5e0">Type</th><th style="padding:8px;border:1px solid #cdd5e0">Graph Direction</th><th style="padding:8px;border:1px solid #cdd5e0">Key Word</th><th style="padding:8px;border:1px solid #cdd5e0">Example</th></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#22AC00;font-weight:bold">Positive</td><td style="padding:8px;border:1px solid #cdd5e0">Goes up left to right ↗</td><td style="padding:8px;border:1px solid #cdd5e0">Increasing</td><td style="padding:8px;border:1px solid #cdd5e0">m = 2</td></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#cc2222;font-weight:bold">Negative</td><td style="padding:8px;border:1px solid #cdd5e0">Goes down left to right ↘</td><td style="padding:8px;border:1px solid #cdd5e0">Decreasing</td><td style="padding:8px;border:1px solid #cdd5e0">m = −3</td></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#FFC107;font-weight:bold">Zero</td><td style="padding:8px;border:1px solid #cdd5e0">Perfectly horizontal →</td><td style="padding:8px;border:1px solid #cdd5e0">Constant</td><td style="padding:8px;border:1px solid #cdd5e0">m = 0</td></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;color:#75787B;font-weight:bold">Undefined</td><td style="padding:8px;border:1px solid #cdd5e0">Perfectly vertical ↕</td><td style="padding:8px;border:1px solid #cdd5e0">Not a function</td><td style="padding:8px;border:1px solid #cdd5e0">x = k</td></tr>
+</table>
+
+<h3 style="color:#FFC107">Slope Formula — Given Two Points</h3>
+<div class="example-box"><h4>Example: Find the slope through (2, 4) and (10, 2)</h4>
+<div class="example-step"><strong>Step 1 — Label:</strong> Point 1: (x₁=2, y₁=4) &nbsp; Point 2: (x₂=10, y₂=2)</div>
+<div class="example-step"><strong>Step 2 — Substitute:</strong> (2 − 4) / (10 − 2) = −2 / 8</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Step 3 — Simplify:</strong> −2/8 = <strong>−1/4</strong> ✓</div>
+</div>
+
+<h3 style="color:#1E2D4F">Finding Slope from a Graph</h3>
+<p style="margin-bottom:10px;line-height:1.6">Identify two clear points on the graph. Starting from the left point, count how many spaces you move up or down (Δy) and how many spaces you move right (Δx).</p>
+
+<h3 style="color:#FFC107">Slope-Intercept Form</h3>
+<div style="text-align:center;font-size:1.5em;color:#1E2D4F;font-weight:bold;margin:14px 0;font-family:Arvo,serif">y = mx + b</div>
+<table class="master-table" style="width:100%;margin-bottom:14px;border-collapse:collapse;">
+<tr style="background:rgba(30,45,79,0.12)"><th style="padding:8px;border:1px solid #cdd5e0">Variable</th><th style="padding:8px;border:1px solid #cdd5e0">Name</th><th style="padding:8px;border:1px solid #cdd5e0">Meaning</th><th style="padding:8px;border:1px solid #cdd5e0">How to Identify</th></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;font-weight:bold;color:#FFC107">m</td><td style="padding:8px;border:1px solid #cdd5e0">Slope</td><td style="padding:8px;border:1px solid #cdd5e0">Rate of change</td><td style="padding:8px;border:1px solid #cdd5e0">The number multiplied by x</td></tr>
+<tr><td style="padding:8px;border:1px solid #cdd5e0;font-weight:bold;color:#0056B3">b</td><td style="padding:8px;border:1px solid #cdd5e0">Y-Intercept</td><td style="padding:8px;border:1px solid #cdd5e0">Starting value (when x = 0)</td><td style="padding:8px;border:1px solid #cdd5e0">The constant at the end</td></tr>
+</table>
+
+<h3 style="color:#1E2D4F">Linear vs. Non-Linear Functions</h3>
+<p style="margin-bottom:10px;line-height:1.6">A linear function has a <strong>constant rate of change</strong> — equal steps in x always produce equal steps in y. A non-linear function does NOT have a constant rate of change.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+<div class="key-concept" style="border-color:#22AC00"><strong style="color:#22AC00">✓ Linear: y = 2x + 1</strong><br>x: 0→1→2→3 | y: 1→3→5→7<br>Rate ALWAYS +2 → LINEAR</div>
+<div class="warning-box"><strong style="color:#cc2222">✗ Non-Linear: y = x² + 1</strong><br>x: 0→1→2→3 | y: 1→2→5→10<br>Rate NOT constant → NON-LINEAR</div>
+</div>
+<div class="key-concept"><strong>🔑 Note:</strong> Other non-linear examples: y = x² (parabola/quadratic), y = 2ˣ (exponential). Their graphs are CURVES, not straight lines.</div>
+</div>
+</div>
+
+<!-- ═══ 6.3 WRITING EQUATIONS FROM TABLES ═══ -->
+<div id="u6t3" class="tab-pane">
+<div class="lesson-section" style="border-color:#FFC107">
+<h2 style="color:#FFC107">6.3 Writing Linear Equations from Tables</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.F.4 — Construct a function to model a linear relationship; determine rate of change from tables.</em></div>
+
+<p style="margin-bottom:10px;line-height:1.6">We can determine whether a table represents a linear function and then write it in slope-intercept form. To check for linearity, calculate <strong>Δy ÷ Δx</strong> between consecutive rows. If the slope is always the same, the relationship is linear.</p>
+
+<div class="warning-box"><strong>⚠️ Important:</strong> Always check SLOPE (Δy ÷ Δx), not just Δy alone — x-values may not increase by 1 each time!</div>
+
+<h3 style="color:#1E2D4F">Steps to Write the Equation from a Table</h3>
+<div class="example-box"><h4>Steps:</h4>
+<div class="example-step"><strong>1. Find the slope:</strong> Pick any two points. slope = (y₂ − y₁) ÷ (x₂ − x₁)</div>
+<div class="example-step"><strong>2. Find the y-intercept:</strong> Use the row where x = 0, or substitute slope + a known point into y = mx + b and solve for b.</div>
+<div class="example-step"><strong>3. Write the equation</strong> in slope-intercept form: y = mx + b</div>
+</div>
+
+<h3 style="color:#22AC00">Worked Example</h3>
+<div class="example-box"><h4>Given: x → y: &nbsp; −2→−4, &nbsp; −1→−1, &nbsp; 0→2, &nbsp; 1→5, &nbsp; 2→8, &nbsp; 3→11</h4>
+<div class="example-step"><strong>Step 1 — Find slope:</strong> Use (0, 2) and (1, 5): m = (5−2) ÷ (1−0) = 3</div>
+<div class="example-step"><strong>Step 2 — Find y-intercept:</strong> When x = 0, y = 2 → b = 2</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Step 3 — Write equation: y = 3x + 2 ✓</strong></div>
+</div>
+</div>
+</div>
+
+<!-- ═══ 6.4 REAL-WORLD CONTEXT ═══ -->
+<div id="u6t4" class="tab-pane">
+<div class="lesson-section" style="border-color:#1E2D4F">
+<h2 style="color:#1E2D4F">6.4 Linear Functions in Real-World Context</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.F.4 — Construct a function to model a linear relationship; interpret rate of change and initial value in context.</em></div>
+
+<p style="margin-bottom:14px;line-height:1.6">A linear equation models a relationship between two quantities where the change is constant (a steady rate of change).</p>
+
+<h3 style="color:#FFC107">Writing Equations from Context — Keywords</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+<div class="key-concept" style="border-color:#FFC107"><strong style="color:#FFC107">m (Slope = Rate of Change)</strong><br>"per," "each," "every," "for each additional"<br>A consistent change for every unit increase in x</div>
+<div class="key-concept" style="border-color:#0056B3"><strong style="color:#0056B3">b (Y-Intercept = Starting Value)</strong><br>"initial value," "starting amount," "deposit"<br>"base fee," "flat rate," "one-time fee"</div>
+</div>
+
+<h3 style="color:#22AC00">Worked Examples</h3>
+<div class="example-box"><h4>Example 1: A plumber charges $80 after 1 hour and $140 after 3 hours.</h4>
+<div class="example-step"><strong>Step 1 — Label points:</strong> (1, 80) and (3, 140)</div>
+<div class="example-step"><strong>Step 2 — Find slope:</strong> m = (140 − 80) ÷ (3 − 1) = 60 ÷ 2 = 30</div>
+<div class="example-step"><strong>Step 3 — Find b:</strong> 80 = 30(1) + b → b = 50</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Equation: y = 30x + 50 ✓</strong></div>
+</div>
+
+<div class="example-box"><h4>Example 2: A taxi charges $3 flat fee plus $2.50 per mile. How much for 7 miles?</h4>
+<div class="example-step"><strong>Identify m:</strong> $2.50 per mile → m = 2.50</div>
+<div class="example-step"><strong>Identify b:</strong> $3 flat fee → b = 3</div>
+<div class="example-step"><strong>Equation:</strong> y = 2.50x + 3</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>7-mile ride: y = 2.50(7) + 3 = 17.50 + 3 = $20.50 ✓</strong></div>
+</div>
+
+<h3 style="color:#1E2D4F">Interpreting Slope and Y-Intercept</h3>
+<div class="example-box"><h4>Practice: The value of a car after x years is y = −1500x + 24000</h4>
+<div class="example-step"><strong>What does slope (−1500) mean?</strong> The car loses $1,500 in value every year.</div>
+<div class="example-step"><strong>What does y-intercept (24000) mean?</strong> The car was worth $24,000 when new (year 0).</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>After 5 years:</strong> y = −1500(5) + 24000 = <strong>$16,500 ✓</strong></div>
+</div>
+</div>
+</div>
+
+<!-- ═══ 6.5 COMPARING FUNCTIONS ═══ -->
+<div id="u6t5" class="tab-pane">
+<div class="lesson-section" style="border-color:#0056B3">
+<h2 style="color:#0056B3">6.5 Comparing Functions</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.F.2 — Compare properties of two functions each represented in a different way.</em></div>
+
+<p style="margin-bottom:10px;line-height:1.6">Linear functions can be represented in four ways. When comparing, convert both to slope-intercept form (y = mx + b) so you can directly compare slopes and y-intercepts.</p>
+
+<div class="key-concept"><strong>🔑 Strategy:</strong> Before answering any comparison question, find slope and y-intercept for BOTH functions first, then answer the specific question.</div>
+
+<h3 style="color:#22AC00">Practice Problem 1</h3>
+<div class="example-box"><h4>Compare: Function A (table: 0→5, 2→11, 4→17, 6→23) vs Function B (y = 4x + 8)</h4>
+<div class="example-step"><strong>Function A:</strong> m = (11−5)÷(2−0) = 3, b = 5</div>
+<div class="example-step"><strong>Function B:</strong> m = 4, b = 8 (read directly)</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Higher rate of change:</strong> Function B (4 > 3) &nbsp; | &nbsp; <strong>Higher initial value:</strong> Function B (8 > 5)</div>
+</div>
+
+<h3 style="color:#22AC00">Practice Problem 2</h3>
+<div class="example-box"><h4>Compare slopes: Function A (graph through (0,6) and (3,0)) vs Function B (points: x=0→y=2, x=4→y=10)</h4>
+<div class="example-step"><strong>Function A:</strong> m = (0−6)÷(3−0) = −6/3 = −2</div>
+<div class="example-step"><strong>Function B:</strong> m = (10−2)÷(4−0) = 8/4 = 2</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Function A has a negative slope, Function B has a positive slope.</strong></div>
+</div>
+
+<h3 style="color:#22AC00">Practice Problem 3 — Cell Phone Plans</h3>
+<div class="example-box"><h4>Plan A: y = 0.05x + 20 vs Plan B: $30 monthly + $0.02/min</h4>
+<div class="example-step"><strong>Plan A:</strong> m = 0.05, b = $20 &nbsp; | &nbsp; <strong>Plan B:</strong> m = 0.02, b = $30</div>
+<div class="example-step"><strong>At 500 min:</strong> A = 0.05(500)+20 = $45 &nbsp; | &nbsp; B = 0.02(500)+30 = $40</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Plan B has higher initial cost. Plan B is cheaper at 500 min ($40 vs $45) ✓</strong></div>
+</div>
+
+<h3 style="color:#22AC00">Practice Problem 4 — Savings Accounts</h3>
+<div class="example-box"><h4>Account A: Starts $300, adds $25/week. Account B: (0,$400), (2,$440), (4,$480)</h4>
+<div class="example-step"><strong>Account A:</strong> y = 25x + 300</div>
+<div class="example-step"><strong>Account B:</strong> m = (440−400)÷(2−0) = $20/wk, b = $400 → y = 20x + 400</div>
+<div class="example-step"><strong>After 10 weeks:</strong> A = 25(10)+300 = $550 &nbsp; | &nbsp; B = 20(10)+400 = $600</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Account B has more after 10 weeks ($600 > $550) ✓</strong></div>
+</div>
+
+<h3 style="color:#22AC00">Practice Problem 5 — Candle</h3>
+<div class="example-box"><h4>A graph shows candle height passing through (0, 12) and (4, 8).</h4>
+<div class="example-step"><strong>Y-intercept:</strong> At x=0, the candle is 12 inches — its full starting height.</div>
+<div class="example-step"><strong>Slope:</strong> m = (8−12)÷(4−0) = −4/4 = −1 → candle burns 1 inch per hour</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Equation: y = −x + 12 ✓</strong></div>
+</div>
+
+<h3 style="color:#22AC00">Practice Problem 6 — Delivery</h3>
+<div class="example-box"><h4>Store 1: y = 2x + 5 &nbsp; Store 2: y = 3x + 2 &nbsp; You live 10 miles away.</h4>
+<div class="example-step"><strong>Store 1:</strong> 2(10) + 5 = $25 &nbsp; | &nbsp; <strong>Store 2:</strong> 3(10) + 2 = $32</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Store 1 is cheaper for 10 miles ($25 vs $32) ✓</strong></div>
+</div>
+</div>
+</div>
+
+<!-- ═══ 6.6 QUALITATIVE GRAPHS ═══ -->
+<div id="u6t6" class="tab-pane">
+<div class="lesson-section" style="border-color:#FFC107">
+<h2 style="color:#FFC107">6.6 Qualitative Graphs</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.F.5 — Describe qualitatively the functional relationship between two quantities by analyzing a graph; sketch a graph from a verbal description.</em></div>
+
+<h3 style="color:#1E2D4F">Key Vocabulary</h3>
+<table class="master-table" style="width:100%;margin-bottom:14px;border-collapse:collapse;">
+<tr style="background:rgba(30,45,79,0.12)"><th style="padding:8px;border:1px solid #cdd5e0">Word</th><th style="padding:8px;border:1px solid #cdd5e0">Graph Looks Like</th><th style="padding:8px;border:1px solid #cdd5e0">Example</th></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold;color:#22AC00">Increasing</td><td style="padding:6px;border:1px solid #cdd5e0">Line/curve goes UP ↗</td><td style="padding:6px;border:1px solid #cdd5e0">Car speeds up; savings grows</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold;color:#cc2222">Decreasing</td><td style="padding:6px;border:1px solid #cdd5e0">Line/curve goes DOWN ↘</td><td style="padding:6px;border:1px solid #cdd5e0">Car slows; temperature drops</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold;color:#FFC107">Constant</td><td style="padding:6px;border:1px solid #cdd5e0">Flat horizontal line →</td><td style="padding:6px;border:1px solid #cdd5e0">Car parked; temp holds steady</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold">Linear</td><td style="padding:6px;border:1px solid #cdd5e0">Straight line</td><td style="padding:6px;border:1px solid #cdd5e0">Steady speed; constant rate</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold">Non-linear</td><td style="padding:6px;border:1px solid #cdd5e0">Curved line</td><td style="padding:6px;border:1px solid #cdd5e0">Accelerating; exponential growth</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold">Steep</td><td style="padding:6px;border:1px solid #cdd5e0">Sharp angle</td><td style="padding:6px;border:1px solid #cdd5e0">Fast change; large slope</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0;font-weight:bold">Shallow</td><td style="padding:6px;border:1px solid #cdd5e0">Gentle angle</td><td style="padding:6px;border:1px solid #cdd5e0">Slow change; small slope</td></tr>
+</table>
+
+<h3 style="color:#22AC00">Problem 1 — Swimmer</h3>
+<div class="example-box"><h4>A swimmer swims at a steady pace to the far wall, rests, then swims back faster.</h4>
+<div class="example-step"><strong>Phase 1:</strong> Distance increases steadily → straight line going UP</div>
+<div class="example-step"><strong>Phase 2:</strong> Resting at wall → FLAT horizontal line</div>
+<div class="example-step"><strong>Phase 3:</strong> Swimming back faster → straight line going DOWN (steeper than phase 1)</div>
+</div>
+<div class="warning-box"><strong>⚠️ Key insight:</strong> When she swims BACK, the distance from start DECREASES — the line goes DOWN, not up. Faster = steeper.</div>
+
+<h3 style="color:#22AC00">Problem 2 — Read the Graph</h3>
+<div class="example-box"><h4>A distance-time graph: steep up (0–3 min), flat (3–6 min), gradual up (6–10 min)</h4>
+<div class="example-step"><strong>0 to 3 min:</strong> Steep upward line → moving away quickly (fast, steady speed)</div>
+<div class="example-step"><strong>3 to 6 min:</strong> Flat / horizontal → stopped, not moving</div>
+<div class="example-step"><strong>6 to 10 min:</strong> Gradual upward line → moving away slowly (slow, steady speed)</div>
+</div>
+
+<h3 style="color:#22AC00">Problem 3 — Boiling Water</h3>
+<div class="example-box"><h4>A pot of water: heats slowly, then rapidly, stays at boiling, then cools gradually.</h4>
+<div class="example-step"><strong>Heating slowly:</strong> Shallow upward curve</div>
+<div class="example-step"><strong>Heating rapidly:</strong> Steep upward curve</div>
+<div class="example-step"><strong>Boiling:</strong> Flat horizontal line (100°C)</div>
+<div class="example-step"><strong>Cooling:</strong> Downward curve (decreasing)</div>
+</div>
+</div>
+</div>
+
+<!-- ═══ 6.7 SYSTEMS OF EQUATIONS ═══ -->
+<div id="u6t7" class="tab-pane">
+<div class="lesson-section" style="border-color:#cc2222">
+<h2 style="color:#1E2D4F">6.7 Systems of Equations</h2>
+<div class="key-concept"><strong>NC Standards:</strong> <em>NC.8.EE.8a, 8b, 8c — Analyze and solve pairs of simultaneous linear equations; interpret solutions in real-world context.</em></div>
+
+<p style="margin-bottom:14px;line-height:1.6"><strong>A solution for a system of linear equations is the coordinate (x, y) that is true for both functions.</strong> There are a few ways to find the solution.</p>
+
+<h3 style="color:#1E2D4F">Graphing Method</h3>
+<p style="margin-bottom:10px">Graph both equations on the same coordinate plane and look for where they intersect.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;">
+<div class="key-concept" style="border-color:#22AC00"><strong style="color:#22AC00">One Solution</strong><br>Lines intersect at one point. Different slopes.</div>
+<div class="warning-box" style="margin-bottom:0"><strong style="color:#cc2222">No Solution</strong><br>Lines are parallel. Same slope, different b.</div>
+<div class="key-concept" style="border-color:#FFC107"><strong style="color:#FFC107">Infinite Solutions</strong><br>Lines are identical. Same slope, same b.</div>
+</div>
+
+<h3 style="color:#1E2D4F">Inspection — Quick Check</h3>
+<table class="master-table" style="width:100%;margin-bottom:14px;border-collapse:collapse;">
+<tr style="background:rgba(30,45,79,0.12)"><th style="padding:8px;border:1px solid #cdd5e0">What You Notice</th><th style="padding:8px;border:1px solid #cdd5e0">Result</th><th style="padding:8px;border:1px solid #cdd5e0">Example</th></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0">Different slopes</td><td style="padding:6px;border:1px solid #cdd5e0;color:#22AC00;font-weight:bold">ONE solution</td><td style="padding:6px;border:1px solid #cdd5e0">y = 3x+2 and y = −x+6</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0">Same slope, different b</td><td style="padding:6px;border:1px solid #cdd5e0;color:#cc2222;font-weight:bold">NO solution</td><td style="padding:6px;border:1px solid #cdd5e0">y = 3x+2 and y = 3x−5</td></tr>
+<tr><td style="padding:6px;border:1px solid #cdd5e0">Identical equations</td><td style="padding:6px;border:1px solid #cdd5e0;color:#FFC107;font-weight:bold">INFINITE solutions</td><td style="padding:6px;border:1px solid #cdd5e0">y = 3x+2 and 2y = 6x+4</td></tr>
+</table>
+
+<h3 style="color:#FFC107">Substitution Method</h3>
+<div class="example-box"><h4>Example 1: y = 4x − 1 and y = 2x − 5</h4>
+<div class="example-step"><strong>Set equal:</strong> 4x − 1 = 2x − 5</div>
+<div class="example-step">−2x from both: 2x − 1 = −5</div>
+<div class="example-step">+1 to both: 2x = −4 → x = −2</div>
+<div class="example-step"><strong>Solve for y:</strong> y = 4(−2) − 1 = −9</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Solution: (−2, −9) ✓</strong></div>
+</div>
+
+<div class="example-box"><h4>Example 2: y = x + 9 and 3x + 8y = −5</h4>
+<div class="example-step"><strong>Substitute:</strong> 3x + 8(x + 9) = −5</div>
+<div class="example-step">3x + 8x + 72 = −5 → 11x + 72 = −5</div>
+<div class="example-step">11x = −77 → x = −7</div>
+<div class="example-step"><strong>Solve for y:</strong> y = −7 + 9 = 2</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Solution: (−7, 2) ✓</strong></div>
+</div>
+
+<h3 style="color:#1E2D4F">Word Problems</h3>
+<div class="example-box"><h4>Problem 1: Cell Phone Plans — A: $30/mo + $0.10/text &nbsp; B: $40 flat. When equal?</h4>
+<div class="example-step"><strong>Equations:</strong> A: y = 0.10x + 30 &nbsp; B: y = 40</div>
+<div class="example-step"><strong>Solve:</strong> 0.10x + 30 = 40 → 0.10x = 10 → x = 100</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Equal at 100 texts. Beyond 100, Company B is cheaper. ✓</strong></div>
+</div>
+
+<div class="example-box"><h4>Problem 2: Fundraiser — Kids $3, adults $5. $250 total, 70 tickets sold.</h4>
+<div class="example-step"><strong>Equations:</strong> c + a = 70 &nbsp; and &nbsp; 3c + 5a = 250</div>
+<div class="example-step"><strong>Substitute:</strong> c = 70 − a → 3(70−a) + 5a = 250 → 210 − 3a + 5a = 250 → 2a = 40 → a = 20</div>
+<div class="example-step">c = 70 − 20 = 50</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>50 children's + 20 adult tickets ✓ Check: 3(50)+5(20)=$250 ✓</strong></div>
+</div>
+
+<div class="example-box"><h4>Problem 3: Car Rentals — X: $20 + $0.30/mi &nbsp; Y: $35 + $0.15/mi</h4>
+<div class="example-step"><strong>Solve:</strong> 0.30x + 20 = 0.15x + 35 → 0.15x = 15 → x = 100 miles</div>
+<div class="example-step"><strong>At 50 miles:</strong> X = $35 &nbsp; Y = $42.50</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Equal at 100 mi. For 50 mi, Company X is cheaper ($35). Over 100 mi, Y is cheaper. ✓</strong></div>
+</div>
+
+<div class="warning-box"><strong>⚠️ Common Error:</strong> When solving a system, make sure to find BOTH x and y. Many students solve for x and forget to substitute back to find y!</div>
+</div>
+</div>
+
+
+<div id="u6rev" class="tab-pane">
+<div id="notes-rev">
+  <div class="sec-header">
+    <div class="sec-badge" style="background:#cc2222">📝</div>
+    <div><h2>Review: Worked Examples &amp; Error Analysis</h2><p>Visual practice covering slope, equations, and systems</p></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📝 Worked Example 1: Finding Slope from a Graph</div>
+    <svg width="520" height="320" viewBox="0 0 520 320">
+      <text x="260" y="20" fill="#1E2D4F" font-family="Arvo" font-size="14" text-anchor="middle" font-weight="bold">Find the slope of the line through (1, 2) and (4, 8)</text>
+      <!-- Grid -->
+      <rect x="40" y="30" width="240" height="240" fill="#f8f9fa" stroke="#cdd5e0" stroke-width="1" rx="4"/>
+      <line x1="40" y1="150" x2="280" y2="150" stroke="#75787B" stroke-width="1.5"/>
+      <line x1="160" y1="30" x2="160" y2="270" stroke="#75787B" stroke-width="1.5"/>
+      <!-- Grid lines -->
+      <line x1="80" y1="30" x2="80" y2="270" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="120" y1="30" x2="120" y2="270" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="200" y1="30" x2="200" y2="270" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="240" y1="30" x2="240" y2="270" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="40" y1="70" x2="280" y2="70" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="40" y1="110" x2="280" y2="110" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="40" y1="190" x2="280" y2="190" stroke="#e5e7eb" stroke-width="0.5"/>
+      <line x1="40" y1="230" x2="280" y2="230" stroke="#e5e7eb" stroke-width="0.5"/>
+      <!-- Line -->
+      <line x1="120" y1="190" x2="260" y2="30" stroke="#0056B3" stroke-width="3"/>
+      <!-- Points -->
+      <circle cx="200" cy="110" r="6" fill="#FFC107" stroke="#1E2D4F" stroke-width="2"/>
+      <text x="212" y="105" fill="#1E2D4F" font-size="11" font-weight="bold">(1, 2)</text>
+      <circle cx="260" cy="30" r="6" fill="#FFC107" stroke="#1E2D4F" stroke-width="2"/>
+      <text x="248" y="48" fill="#1E2D4F" font-size="11" font-weight="bold">(4, 8)</text>
+      <!-- Rise/Run -->
+      <line x1="200" y1="110" x2="260" y2="110" stroke="#22AC00" stroke-width="2" stroke-dasharray="5"/>
+      <line x1="260" y1="110" x2="260" y2="30" stroke="#cc2222" stroke-width="2" stroke-dasharray="5"/>
+      <text x="230" y="128" fill="#22AC00" font-size="11" text-anchor="middle" font-weight="bold">Run = 3</text>
+      <text x="275" y="75" fill="#cc2222" font-size="11" font-weight="bold">Rise = 6</text>
+      <!-- Solution steps -->
+      <rect x="310" y="40" width="200" height="240" fill="rgba(30,45,79,0.06)" stroke="#1E2D4F" stroke-width="2" rx="8"/>
+      <text x="410" y="65" fill="#1E2D4F" font-family="Arvo" font-size="12" text-anchor="middle" font-weight="bold">Steps:</text>
+      <text x="320" y="90" fill="#1a1a24" font-size="11">Step 1: Identify points</text>
+      <text x="320" y="110" fill="#0056B3" font-size="12" font-weight="bold">(1, 2) and (4, 8)</text>
+      <text x="320" y="135" fill="#1a1a24" font-size="11">Step 2: Use formula</text>
+      <text x="320" y="155" fill="#FFC107" font-size="12" font-weight="bold">m = (y₂−y₁)/(x₂−x₁)</text>
+      <text x="320" y="180" fill="#1a1a24" font-size="11">Step 3: Substitute</text>
+      <text x="320" y="200" fill="#1E2D4F" font-size="12" font-weight="bold">m = (8−2)/(4−1)</text>
+      <text x="320" y="225" fill="#1a1a24" font-size="11">Step 4: Simplify</text>
+      <rect x="330" y="235" width="160" height="30" fill="rgba(34,172,0,0.2)" stroke="#22AC00" stroke-width="2" rx="6"/>
+      <text x="410" y="256" fill="#22AC00" font-size="16" text-anchor="middle" font-weight="bold">m = 6/3 = 2 ✓</text>
+    </svg>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📝 Worked Example 2: Writing an Equation from Slope + Point</div>
+    <svg width="520" height="250" viewBox="0 0 520 250">
+      <text x="260" y="22" fill="#1E2D4F" font-family="Arvo" font-size="14" text-anchor="middle" font-weight="bold">Write the equation: slope = 3/4, passes through (0, −2)</text>
+      <rect x="30" y="40" width="460" height="38" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2" rx="6"/>
+      <text x="260" y="65" fill="#1E2D4F" font-size="16" text-anchor="middle" font-weight="bold">y = mx + b</text>
+      <text x="260" y="100" fill="#FFC107" font-family="Arvo" font-size="12" text-anchor="middle" font-weight="bold">↓ Plug in: m = 3/4, b = −2 (y-intercept is the point where x = 0)</text>
+      <rect x="100" y="115" width="320" height="38" fill="rgba(255,193,7,0.1)" stroke="#FFC107" stroke-width="2" rx="6"/>
+      <text x="260" y="140" fill="#1E2D4F" font-size="16" text-anchor="middle" font-weight="bold">y = (3/4)x + (−2)</text>
+      <rect x="120" y="170" width="280" height="35" fill="rgba(34,172,0,0.2)" stroke="#22AC00" stroke-width="3" rx="8"/>
+      <text x="260" y="194" fill="#22AC00" font-size="18" text-anchor="middle" font-weight="bold">y = ¾x − 2 ✓</text>
+      <text x="260" y="230" fill="#5a5a6a" font-size="11" text-anchor="middle">Remember: slope is ALWAYS a fraction, y-intercept is where the line crosses the y-axis</text>
+    </svg>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📝 Worked Example 3: Solving a System by Graphing</div>
+    <svg width="520" height="350" viewBox="0 0 520 350">
+      <text x="260" y="20" fill="#1E2D4F" font-family="Arvo" font-size="13" text-anchor="middle" font-weight="bold">Solve: y = 2x − 1 and y = −x + 5</text>
+      <!-- Grid -->
+      <rect x="30" y="35" width="250" height="250" fill="#f8f9fa" stroke="#cdd5e0" stroke-width="1" rx="4"/>
+      <line x1="30" y1="160" x2="280" y2="160" stroke="#75787B" stroke-width="1.5"/>
+      <line x1="155" y1="35" x2="155" y2="285" stroke="#75787B" stroke-width="1.5"/>
+      <!-- Axis labels -->
+      <text x="275" y="175" fill="#75787B" font-size="10">x</text>
+      <text x="145" y="45" fill="#75787B" font-size="10">y</text>
+      <!-- Line 1: y = 2x - 1 (blue) -->
+      <line x1="80" y1="260" x2="255" y2="35" stroke="#1E2D4F" stroke-width="2.5"/>
+      <text x="240" y="55" fill="#1E2D4F" font-size="10" font-weight="bold">y = 2x − 1</text>
+      <!-- Line 2: y = -x + 5 (gold) -->
+      <line x1="30" y1="35" x2="280" y2="285" stroke="#FFC107" stroke-width="2.5"/>
+      <text x="255" y="275" fill="#FFC107" font-size="10" font-weight="bold">y = −x + 5</text>
+      <!-- Intersection point (2, 3) -->
+      <circle cx="205" cy="85" r="8" fill="none" stroke="#22AC00" stroke-width="3"/>
+      <circle cx="205" cy="85" r="3" fill="#22AC00"/>
+      <text x="218" y="80" fill="#22AC00" font-size="12" font-weight="bold">(2, 3)</text>
+      <!-- Solution steps -->
+      <rect x="300" y="40" width="210" height="260" fill="rgba(30,45,79,0.06)" stroke="#1E2D4F" stroke-width="2" rx="8"/>
+      <text x="405" y="65" fill="#1E2D4F" font-family="Arvo" font-size="12" text-anchor="middle" font-weight="bold">Algebraic Check:</text>
+      <text x="310" y="90" fill="#1a1a24" font-size="11">Set equations equal:</text>
+      <text x="310" y="110" fill="#1E2D4F" font-size="12" font-weight="bold">2x − 1 = −x + 5</text>
+      <text x="310" y="135" fill="#1a1a24" font-size="11">Add x to both sides:</text>
+      <text x="310" y="155" fill="#1E2D4F" font-size="12" font-weight="bold">3x − 1 = 5</text>
+      <text x="310" y="180" fill="#1a1a24" font-size="11">Add 1, then divide by 3:</text>
+      <text x="310" y="200" fill="#1E2D4F" font-size="12" font-weight="bold">3x = 6 → x = 2</text>
+      <text x="310" y="225" fill="#1a1a24" font-size="11">Plug back in:</text>
+      <text x="310" y="245" fill="#1E2D4F" font-size="12" font-weight="bold">y = 2(2) − 1 = 3</text>
+      <rect x="310" y="260" width="190" height="28" fill="rgba(34,172,0,0.2)" stroke="#22AC00" stroke-width="2" rx="6"/>
+      <text x="405" y="280" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">Solution: (2, 3) ✓</text>
+    </svg>
+  </div>
+
+  <div class="card" style="border-top:3px solid #cc2222">
+    <div class="card-title" style="color:#cc2222">🔍 Spot the Error: Find slope from (3, 7) and (6, 1)</div>
+    <div style="background:#fef2f2;padding:10px 14px;border-radius:8px;margin:8px 0;border-left:4px solid #cc2222;font-family:Courier New,monospace"><strong style="color:#cc2222">✗ Student:</strong> m = (6 − 3)/(1 − 7) = 3/(−6) = −1/2</div>
+    <div style="background:#f0fdf4;padding:10px 14px;border-radius:8px;margin:8px 0;border-left:4px solid #22AC00"><strong style="color:#166534">✓ Fix:</strong> The student swapped rise and run! It should be (y₂−y₁)/(x₂−x₁) = (1−7)/(6−3) = <strong>−6/3 = −2</strong></div>
+    <div class="note-box hint"><h4>💡 Remember</h4>Rise (y-change) goes on TOP, Run (x-change) goes on BOTTOM. Never swap them!</div>
+  </div>
+
+  <div class="card" style="border-top:3px solid #cc2222">
+    <div class="card-title" style="color:#cc2222">🔍 Spot the Error: Is this a function?</div>
+    <svg width="400" height="140" viewBox="0 0 400 140">
+      <text x="200" y="18" fill="#1E2D4F" font-size="12" text-anchor="middle" font-weight="bold">Input → Output Mapping</text>
+      <!-- Inputs -->
+      <rect x="30" y="30" width="80" height="100" fill="rgba(30,45,79,0.1)" stroke="#1E2D4F" stroke-width="2" rx="8"/>
+      <text x="70" y="50" fill="#1E2D4F" font-size="11" text-anchor="middle" font-weight="bold">Inputs</text>
+      <text x="70" y="72" fill="#1a1a24" font-size="13" text-anchor="middle">2</text>
+      <text x="70" y="92" fill="#1a1a24" font-size="13" text-anchor="middle">3</text>
+      <text x="70" y="112" fill="#1a1a24" font-size="13" text-anchor="middle">4</text>
+      <!-- Outputs -->
+      <rect x="200" y="30" width="80" height="100" fill="rgba(255,193,7,0.15)" stroke="#FFC107" stroke-width="2" rx="8"/>
+      <text x="240" y="50" fill="#FFC107" font-size="11" text-anchor="middle" font-weight="bold">Outputs</text>
+      <text x="240" y="72" fill="#1a1a24" font-size="13" text-anchor="middle">5</text>
+      <text x="240" y="92" fill="#1a1a24" font-size="13" text-anchor="middle">7</text>
+      <text x="240" y="112" fill="#1a1a24" font-size="13" text-anchor="middle">9</text>
+      <!-- Arrows - 2 goes to both 5 AND 7 -->
+      <line x1="110" y1="70" x2="200" y2="70" stroke="#cc2222" stroke-width="2" marker-end="url(#arrowR)"/>
+      <line x1="110" y1="70" x2="200" y2="90" stroke="#cc2222" stroke-width="2" marker-end="url(#arrowR)"/>
+      <line x1="110" y1="90" x2="200" y2="90" stroke="#22AC00" stroke-width="2"/>
+      <line x1="110" y1="110" x2="200" y2="110" stroke="#22AC00" stroke-width="2"/>
+      <!-- Verdict -->
+      <rect x="300" y="55" width="90" height="55" fill="rgba(204,34,34,0.15)" stroke="#cc2222" stroke-width="2" rx="8"/>
+      <text x="345" y="78" fill="#cc2222" font-size="11" text-anchor="middle" font-weight="bold">NOT a</text>
+      <text x="345" y="96" fill="#cc2222" font-size="11" text-anchor="middle" font-weight="bold">function!</text>
+    </svg>
+    <div style="background:#fef2f2;padding:10px 14px;border-radius:8px;margin:8px 0;border-left:4px solid #cc2222"><strong style="color:#cc2222">✗ Student says:</strong> "It's a function because each output has one input."</div>
+    <div style="background:#f0fdf4;padding:10px 14px;border-radius:8px;margin:8px 0;border-left:4px solid #22AC00"><strong style="color:#166534">✓ Fix:</strong> The rule is each INPUT must have exactly one output. Here, input 2 maps to BOTH 5 and 7 — not a function!</div>
+  </div>
+
+  <div class="card" style="border-top:3px solid #cc2222">
+    <div class="card-title" style="color:#cc2222">🔍 Spot the Error: System of Equations</div>
+    <div style="background:#fef2f2;padding:10px 14px;border-radius:8px;margin:8px 0;border-left:4px solid #cc2222;font-family:Courier New,monospace"><strong style="color:#cc2222">✗ Student:</strong> Solve y = 3x + 1 and y = 3x − 4. Student writes: 3x + 1 = 3x − 4 → 1 = −4 → "x = −5"</div>
+    <div style="background:#f0fdf4;padding:10px 14px;border-radius:8px;margin:8px 0;border-left:4px solid #22AC00"><strong style="color:#166534">✓ Fix:</strong> 1 = −4 is a FALSE statement (variables cancelled). This means <strong>NO SOLUTION</strong> — the lines are parallel (same slope of 3, different y-intercepts).</div>
+    <div class="note-box hint"><h4>💡 Remember</h4>Same slope + different y-intercept = parallel lines = no solution. Same slope + same y-intercept = same line = infinite solutions.</div>
+  </div>
+
+</div>
+</div>
+<script>
+function openTab(id, btn) {
+  document.querySelectorAll('.tab-pane').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(t){ t.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: document.querySelector('.tabs').offsetTop - 60, behavior: 'smooth' });
+}
+</script>
+<script>
+// ── NAV ──────────────────────────────────────────────────
+let currentTab='notes', currentSection='1';
+function switchTab(tab,btn){
+  currentTab=tab;
+  document.querySelectorAll('.main-nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  showPage();
+}
+function switchSection(sec,btn){
+  currentSection=sec;
+  document.querySelectorAll('.sub-nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  showPage();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function showPage(){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById(currentTab+'-'+currentSection);
+  if(el) el.classList.add('active');
+  setTimeout(initDesmosOnPage,120);
+}
+
+// ── DESMOS ──────────────────────────────────────────────
+const desmosInstances={};
+const desmosConfigs={
+  // CP 6.2
+  'desmos-cp2-1':{exprs:[],student:true},
+  'desmos-cp2-2':{exprs:[{latex:'y=-\\frac{1}{2}x+1',color:'#1E2D4F'},{latex:'(-2,2)',color:'#FFC107'},{latex:'(2,0)',color:'#FFC107'}],student:false},
+  'desmos-cp2-3':{exprs:[],student:true},
+  'desmos-cp2-4':{exprs:[],student:true},
+  // CP 6.3
+  'desmos-cp3-1':{exprs:[{latex:'(0,3)',color:'#FFC107'},{latex:'(1,7)',color:'#FFC107'},{latex:'(2,11)',color:'#FFC107'},{latex:'(3,15)',color:'#FFC107'}],student:true},
+  'desmos-cp3-2':{exprs:[],student:true},
+  // CP 6.4
+  'desmos-cp4-1':{exprs:[],student:true},
+  'desmos-cp4-2':{exprs:[],student:true},
+  // CP 6.5
+  'desmos-cp5-1':{exprs:[],student:true},
+  'desmos-cp5-2':{exprs:[{latex:'(0,-4)',color:'#1E2D4F'},{latex:'(2,2)',color:'#1E2D4F'},{latex:'(0,3)',color:'#0056B3'},{latex:'(4,1)',color:'#0056B3'}],student:true},
+  // CP 6.7
+  'desmos-cp7a':{exprs:[{latex:'y=3x-4',color:'#1E2D4F'},{latex:'y=x+2',color:'#0056B3'}],student:false},
+  'desmos-cp7b':{exprs:[],student:true},
+  'desmos-cp7c':{exprs:[],student:true},
+  // HW 6.2
+  'desmos-hw2':{exprs:[],student:true},
+  'desmos-hw2b':{exprs:[],student:true},
+  // HW 6.3
+  'desmos-hw3':{exprs:[],student:true},
+  // HW 6.4
+  'desmos-hw4':{exprs:[],student:true},
+  'desmos-hw4b':{exprs:[],student:true},
+  // HW 6.5
+  'desmos-hw5':{exprs:[],student:true},
+  // HW 6.6
+  'desmos-hw6':{exprs:[],student:true},
+  // HW 6.7
+  'desmos-hw7':{exprs:[{latex:'2x+y=8',color:'#1E2D4F'},{latex:'y=x-1',color:'#0056B3'}],student:false},
+};
+
+function makeDesmosCalc(id){
+  const el=document.getElementById(id);
+  if(!el||desmosInstances[id]||typeof Desmos==='undefined') return;
+  try{
+    const cfg=desmosConfigs[id]||{exprs:[],student:true};
+    const calc=Desmos.GraphingCalculator(el,{
+      keypad:false, expressions:true, settingsMenu:false,
+      zoomButtons:true, border:false, lockViewport:false
+    });
+    cfg.exprs.forEach((exp,i)=>{
+      const obj=typeof exp==='string'?{latex:exp}:exp;
+      calc.setExpression({id:'e'+i,...obj});
+    });
+    desmosInstances[id]=calc;
+    // Add a label for student mode
+    if(cfg.student && !el.dataset.labeled){
+      el.dataset.labeled='1';
+    }
+  }catch(e){console.warn('Desmos:',id,e);}
+}
+
+function initDesmosOnPage(){
+  const active=document.querySelector('.page.active');
+  if(!active) return;
+  active.querySelectorAll('.desmos-container').forEach(div=>{
+    makeDesmosCalc(div.id);
+  });
+}
+
+// ── ANSWER CHECKING ─────────────────────────────────────
+
+function normalize(str){
+  return str.toString().trim().toLowerCase()
+    .replace(/\s+/g,'').replace(/−/g,'-').replace(/½/g,'1/2').replace(/\$/g,'');
+}
+
+// Block decimal slopes (e.g. 0.5, -0.5, 1.5)
+function isDecimalSlope(val){
+  return /^-?\d*\.\d+$/.test(val.toString().trim().replace(/−/g,'-'));
+}
+
+// IDs that are slope fields requiring fractions
+function isSlopeField(id){
+  return /(-sl-a$|-sl-b$|-sl-c$|rr-m$|cp5m$|cp5n$|hw2-1a$|hw2-1b$|hw2-1c$|hw2-1d$|hw5-bm$|hw3a-m$|hw3b-m$|hw3c-m$|hw3ch-m$|cp3s-m$|cp3a-m$|cp5a-m$|cp5b-m$|hw2-m$)$/.test(id);
+}
+
+function findFeedbackEl(id){
+  let el=document.getElementById('fb-'+id);
+  if(el) return el;
+  const parts=id.split('-');
+  if(parts.length>1){ el=document.getElementById('fb-'+parts.slice(1).join('-')); if(el) return el; }
+  const m=id.match(/^([a-z]+\d+[a-z]*)-/);
+  if(m){ el=document.getElementById('fb-'+m[1]); if(el) return el; }
+  return null;
+}
+
+function markInput(id,correct){
+  const el=document.getElementById(id);
+  if(!el) return;
+  el.classList.remove('correct','wrong');
+  el.classList.add(correct?'correct':'wrong');
+}
+
+function checkMulti(pairs, isSlopeCheck){
+  pairs.forEach(([id,answer,msg])=>{
+    const el=document.getElementById(id);
+    if(!el) return;
+    const raw=el.value||'';
+    // Decimal slope check
+    if((isSlopeCheck||isSlopeField(id)) && isDecimalSlope(raw)){
+      markInput(id,false);
+      const fb=findFeedbackEl(id);
+      if(fb){
+        fb.textContent='📐 Write slope as a fraction! e.g. -1/2 not -0.5, or 3/2 not 1.5';
+        fb.className='feedback show warn';
+      }
+      return;
+    }
+    const userVal=normalize(raw);
+    const answers=answer.split('|').map(normalize);
+    const ok=answers.some(a=>userVal===a||userVal.replace(/\s/g,'')===a.replace(/\s/g,''));
+    markInput(id,ok);
+    if(msg){
+      const fb=findFeedbackEl(id);
+      if(fb){
+        fb.textContent=(ok?'✅ Correct! ':'❌ Not quite. ')+msg;
+        fb.className='feedback show '+(ok?'ok':'bad');
+      }
+    }
+  });
+}
+
+function checkSelects(pairs, customFbId, customMsgs){
+  let allOk=true;
+  pairs.forEach(([id,answer])=>{
+    const el=document.getElementById(id);
+    if(!el) return;
+    const ok=normalize(el.value)===normalize(answer);
+    el.classList.remove('correct','wrong');
+    el.classList.add(ok?'correct':'wrong');
+    // Per-item feedback if customMsgs provided
+    if(customMsgs && customMsgs[id.split('-').pop()]){
+      const fb=findFeedbackEl(id);
+      if(fb){
+        fb.textContent=(ok?'✅ ':'❌ ')+customMsgs[id.split('-').pop()];
+        fb.className='feedback show '+(ok?'ok':'bad');
+      }
+    }
+    if(!ok) allOk=false;
+  });
+  if(customFbId){
+    const fb=document.getElementById(customFbId);
+    if(fb){
+      fb.textContent=allOk?'✅ All correct!':'❌ Check your selections and try again.';
+      fb.className='feedback show '+(allOk?'ok':'bad');
+    }
+  }
+}
+
+function selectMC(el,groupId,value){
+  el.dataset.value=value;
+  document.querySelectorAll(`#${groupId} .mc-opt`).forEach(o=>{
+    o.classList.remove('selected','correct','wrong');
+    o.querySelector('input').checked=false;
+  });
+  el.classList.add('selected');
+  el.querySelector('input').checked=true;
+}
+
+function checkMC(groupId,correct,fbId,feedbackMsg){
+  // Handle 3-arg call: checkMC(groupId, correct, msg) — fbId is auto
+  if(typeof fbId==='string' && typeof feedbackMsg==='undefined'){
+    // Called as checkMC(groupId, correct, msg)
+    feedbackMsg=fbId;
+    fbId='fb-'+groupId;
+  }
+  const group=document.getElementById(groupId);
+  if(!group) return;
+  const selected=group.querySelector('.mc-opt.selected');
+  if(!selected){
+    const fb=document.getElementById(fbId);
+    if(fb){fb.textContent='⚠️ Please select an answer first!';fb.className='feedback show warn';}
+    return;
+  }
+  const ok=normalize(selected.dataset.value)===normalize(correct);
+  group.querySelectorAll('.mc-opt').forEach(o=>{
+    o.classList.remove('correct','wrong');
+    if(normalize(o.dataset.value)===normalize(correct)) o.classList.add('correct');
+    else if(o.classList.contains('selected')&&!ok) o.classList.add('wrong');
+  });
+  const fb=document.getElementById(fbId);
+  if(fb){
+    fb.textContent=(ok?'✅ Correct! ':'❌ Not quite. ')+feedbackMsg;
+    fb.className='feedback show '+(ok?'ok':'bad');
+  }
+}
+
+// ── SHAPE SELECTOR ──────────────────────────────────────
+function selectShape(el,groupId,idx){
+  document.querySelectorAll(`#${groupId} .shape-opt`).forEach(o=>{
+    o.classList.remove('selected','correct','wrong');
+  });
+  el.classList.add('selected');
+  el.dataset.selectedIdx=idx;
+}
+
+function checkShape(groupId,correctIdx,fbId,correctMsg){
+  const group=document.getElementById(groupId);
+  if(!group) return;
+  const selected=group.querySelector('.shape-opt.selected');
+  if(!selected){
+    const fb=document.getElementById(fbId);
+    if(fb){fb.textContent='⚠️ Click a graph to select it first!';fb.className='feedback show warn';}
+    return;
+  }
+  const userIdx=parseInt(selected.dataset.selectedIdx);
+  const ok=userIdx===correctIdx;
+  const opts=group.querySelectorAll('.shape-opt');
+  opts.forEach((o,i)=>{
+    o.classList.remove('correct','wrong');
+    if(i===correctIdx) o.classList.add('correct');
+    else if(o.classList.contains('selected')&&!ok) o.classList.add('wrong');
+  });
+  const fb=document.getElementById(fbId);
+  if(fb){
+    fb.textContent=ok?'✅ '+correctMsg:'❌ Not quite — the correct graph is highlighted green. '+correctMsg;
+    fb.className='feedback show '+(ok?'ok':'bad');
+  }
+}
+
+function checkKeywords(triplets){
+  triplets.forEach(([id,keywords,msg])=>{
+    const el=document.getElementById(id);
+    const fb=document.getElementById('fb-'+id);
+    if(!el||!fb) return;
+    const val=el.value.toLowerCase();
+    const found=keywords.some(k=>val.includes(k.toLowerCase()));
+    markInput(id,found);
+    fb.textContent=(found?'✅ Good! ':'❌ Try again. ')+msg;
+    fb.className='feedback show '+(found?'ok':'bad');
+  });
+}
+
+// ── AI TUTOR ────────────────────────────────────────────
+let aiOpen=false, aiHistory=[];
+function toggleAI(){
+  aiOpen=!aiOpen;
+  document.getElementById('ai-panel').classList.toggle('open',aiOpen);
+  const t=document.getElementById('ai-toggle');
+  t.textContent=aiOpen?'✕':'🦅';
+  t.style.fontSize=aiOpen?'22px':'26px';
+}
+function addMsg(role,text){
+  const div=document.getElementById('ai-messages');
+  const msg=document.createElement('div');
+  msg.className='msg '+role;
+  msg.textContent=text;
+  div.appendChild(msg);
+  div.scrollTop=div.scrollHeight;
+  return msg;
+}
+async function sendAI(){
+  const input=document.getElementById('ai-input');
+  const text=input.value.trim();
+  if(!text) return;
+  input.value='';
+  addMsg('user',text);
+  aiHistory.push({role:'user',content:text});
+  const sendBtn=document.getElementById('ai-send');
+  sendBtn.disabled=true;
+  const thinking=addMsg('bot thinking','🦅 Thinking...');
+  const sys=`You are the Kingfisher Tutor, a friendly math assistant for 8th-grade students at IC Imagine Public Charter School in Asheville, NC. You help with Unit 6: Functions and Linear Relationships (sections 6.1–6.7: functions, slope, equations from tables, real-world context, comparing functions, qualitative graphs, systems of equations). Rules: (1) For homework problems give HINTS not answers — ask guiding questions. (2) Always insist slopes are written as fractions, never decimals. (3) Keep responses short — 2-4 sentences max. (4) Be warm, encouraging, use occasional emojis. (5) You CAN check if a student answer is correct when they share it. (6) For anything outside math, redirect kindly.`;
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,system:sys,messages:aiHistory.slice(-8)})
+    });
+    const data=await resp.json();
+    const reply=data.content?.[0]?.text||'Sorry, connection issue — try again!';
+    thinking.remove();
+    addMsg('bot',reply);
+    aiHistory.push({role:'assistant',content:reply});
+  }catch(e){
+    thinking.remove();
+    addMsg('bot','Connection hiccup! Check your internet and try again. 🔄');
+  }
+  sendBtn.disabled=false;
+}
+
+// ── INIT ────────────────────────────────────────────────
+// Load Desmos
+if(!window.Desmos){
+  const s=document.createElement('script');
+  s.src='https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0ffa6';
+  s.onload=()=>setTimeout(initDesmosOnPage,300);
+  s.onerror=function(){
+    document.querySelectorAll('.desmos-container').forEach(function(div){
+      div.style.display='flex';div.style.alignItems='center';div.style.justifyContent='center';
+      div.style.background='rgba(30,45,79,0.08)';div.style.flexDirection='column';div.style.gap='12px';
+      div.innerHTML='<p style="font-size:0.95em;color:#1E2D4F;font-weight:bold;">📊 Graphing Calculator</p><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener" style="padding:10px 24px;background:#FFC107;color:#1E2D4F;border-radius:8px;font-weight:bold;text-decoration:none;font-family:Arvo,serif;">Open Desmos Calculator →</a>';
+    });
+  };
+  document.head.appendChild(s);
+}
+window.addEventListener('load',()=>setTimeout(initDesmosOnPage,600));
+</script>
+
+<!-- ═══ KINGFISHER AI TUTOR ═══ -->
+<style>
+#kf-tutor-bubble{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Inter','Nunito',system-ui,sans-serif;}
+#kf-tutor-toggle{width:60px;height:60px;border-radius:50%;background:#FFC107;color:#1E2D4F;border:none;cursor:pointer;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:all .2s;display:flex;align-items:center;justify-content:center;}
+#kf-tutor-toggle:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(0,0,0,.3);}
+#kf-tutor-panel{position:absolute;bottom:74px;right:0;width:370px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.22);border:1px solid #e2e8f0;display:none;flex-direction:column;overflow:hidden;max-height:520px;}
+#kf-tutor-panel.open{display:flex;}
+.kf-header{background:#1E2D4F;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px;}
+.kf-avatar{width:36px;height:36px;background:#FFC107;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.kf-header h3{font-size:.95rem;font-weight:800;margin:0;}.kf-header p{font-size:.72rem;color:#FFC107;font-weight:600;margin:0;}
+#kf-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:200px;max-height:340px;}
+.kf-msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:.85rem;line-height:1.5;font-weight:600;}
+.kf-msg.user{background:#f0f4ff;border:1px solid #c7d2fe;align-self:flex-end;border-bottom-right-radius:4px;color:#1a1a2e;}
+.kf-msg.bot{background:#f4f4f4;border:1px solid #e2e8f0;align-self:flex-start;border-bottom-left-radius:4px;color:#1a1a2e;}
+.kf-msg.bot.thinking{color:#64748b;font-style:italic;}
+.kf-input-row{display:flex;gap:8px;padding:12px;border-top:1px solid #e2e8f0;}
+#kf-input{flex:1;border:2px solid #e2e8f0;border-radius:9px;padding:9px 12px;font-family:'Inter','Nunito',system-ui,sans-serif;font-size:.85rem;font-weight:600;outline:none;color:#1a1a2e;}
+#kf-input:focus{border-color:#1E2D4F;}
+#kf-send{background:#1E2D4F;color:#fff;border:none;border-radius:9px;padding:9px 14px;cursor:pointer;font-family:'Inter','Nunito',system-ui,sans-serif;font-weight:800;font-size:.82rem;transition:.2s;}
+#kf-send:hover{background:#2a3d6b;}
+#kf-send:disabled{opacity:.5;cursor:not-allowed;}
+@media(max-width:480px){#kf-tutor-panel{width:calc(100vw - 32px);right:-8px;}}
+</style>
+
+<div id="kf-tutor-bubble">
+  <div id="kf-tutor-panel">
+    <div class="kf-header">
+      <div class="kf-avatar">🦅</div>
+      <div><h3>Kingfisher Tutor</h3><p>IC IMAGINE MATH HELPER</p></div>
+    </div>
+    <div id="kf-messages">
+      <div class="kf-msg bot">Hi! I'm your Kingfisher Tutor 🦅 Ask me anything about the math on this page — I'll give you hints and help you think through it!</div>
+    </div>
+    <div class="kf-input-row">
+      <input id="kf-input" type="text" placeholder="Ask a math question..." onkeydown="if(event.key==='Enter')kfSend()">
+      <button id="kf-send" onclick="kfSend()">Send</button>
+    </div>
+  </div>
+  <button id="kf-tutor-toggle" onclick="kfToggle()" title="Kingfisher Tutor">🦅</button>
+</div>
+
+<script>
+(function(){
+  var kfOpen=false, kfHistory=[];
+  window.kfToggle=function(){
+    kfOpen=!kfOpen;
+    document.getElementById('kf-tutor-panel').classList.toggle('open',kfOpen);
+    var t=document.getElementById('kf-tutor-toggle');
+    t.textContent=kfOpen?'\u2715':'\ud83e\udd85';
+    t.style.fontSize=kfOpen?'22px':'26px';
+  };
+  function kfAddMsg(role,text){
+    var div=document.getElementById('kf-messages');
+    var msg=document.createElement('div');
+    msg.className='kf-msg '+role;
+    msg.textContent=text;
+    div.appendChild(msg);
+    div.scrollTop=div.scrollHeight;
+    return msg;
+  }
+  window.kfSend=async function(){
+    var input=document.getElementById('kf-input');
+    var text=input.value.trim();
+    if(!text) return;
+    input.value='';
+    kfAddMsg('user',text);
+    kfHistory.push({role:'user',content:text});
+    var sendBtn=document.getElementById('kf-send');
+    sendBtn.disabled=true;
+    var thinking=kfAddMsg('bot thinking','\ud83e\udd85 Thinking...');
+    var sys=`You are the Kingfisher Tutor, a friendly math assistant for 8th-grade students at IC Imagine Public Charter School in Asheville, NC. You are currently helping with Unit 6: Functions & Linear Relationships (sections 6.1–6.7: functions, slope, equations from tables, real-world context, comparing functions, qualitative graphs, systems of equations). Standards: NC.8.F.1–5, NC.8.EE.5–8. Rules: (1) For homework or practice problems, give HINTS not answers — ask guiding questions. (2) Always insist slopes be written as fractions, never decimals. (3) Keep responses short — 2-4 sentences max. (4) Be warm, encouraging, use occasional emojis. (5) You CAN check if a student answer is correct when they share it. (6) For anything outside math, redirect kindly. (7) If a student seems stuck, break the problem into smaller steps.`;
+    try{
+      var resp=await fetch('https://api.anthropic.com/v1/messages',{
+        method:'POST',headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,system:sys,messages:kfHistory.slice(-8)})
+      });
+      if(!resp.ok){
+        thinking.remove();
+        if(resp.status===401){
+          kfAddMsg('bot','The Kingfisher Tutor needs an API key to work. Ask your teacher for help setting this up! 🔑');
+        } else {
+          kfAddMsg('bot','Hmm, I hit a snag (error '+resp.status+'). Try again in a moment! 🔄');
+        }
+        sendBtn.disabled=false;
+        return;
+      }
+      var data=await resp.json();
+      var reply=(data.content && data.content[0] && data.content[0].text) || 'Sorry, connection issue — try again!';
+      thinking.remove();
+      kfAddMsg('bot',reply);
+      kfHistory.push({role:'assistant',content:reply});
+    }catch(e){
+      thinking.remove();
+      kfAddMsg('bot','Connection hiccup! Check your internet and try again. \ud83d\udd04');
+    }
+    sendBtn.disabled=false;
+  };
+})();
+</script>
+<!-- ═══ END KINGFISHER AI TUTOR ═══ -->
+
+</body>
+</html>

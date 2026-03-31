@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8 Practice — Transformations</title>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E2D4F;--gold:#FFC107;--white:#fff;--lgray:#F4F4F4;--royal:#0056B3;--green:#22AC00;--dkgreen:#1a7000;--red:#cc2222;--mid:#e8edf5}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--lgray);color:#1a1a24;font-size:17px;line-height:1.6}
+nav.top-nav{background:var(--navy);padding:10px 14px;position:sticky;top:0;z-index:1000;border-bottom:3px solid var(--gold)}
+.nav-container{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav-title{font-family:'Arvo',serif;font-size:0.9em;margin-right:auto;font-weight:700;color:var(--gold)}.nav-title span{color:#fff}
+.nb{font-family:'Inter',sans-serif;font-size:0.75em;font-weight:bold;padding:7px 12px;background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.3);border-radius:4px;color:#fff;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s}
+.nb:hover{border-color:var(--gold);color:var(--gold);background:rgba(255,193,7,0.15)}.nb.active{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:700}
+.wrap{max-width:100%;margin:0 auto;padding:16px 14px 80px}
+.page-hdr{background:linear-gradient(135deg,var(--navy),#0d1f3f);border-radius:12px;padding:18px 22px;margin-bottom:18px;border:3px solid var(--gold)}
+.page-hdr h1{font-family:'Arvo',serif;color:var(--gold);font-size:1.2em;margin-bottom:4px}.page-hdr p{color:#b8c8e8;font-size:0.88em}
+.score-box{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding:9px 13px;background:var(--navy);border-radius:8px;color:var(--white)}
+.score-box span{font-family:'Arvo',serif;font-size:0.88em}.sv{color:var(--gold);font-weight:bold;font-size:1.1em}
+.tip{background:#e8f5e2;border-left:4px solid var(--green);padding:9px 13px;border-radius:0 8px 8px 0;margin:10px 0;font-size:0.9em}.tip strong{color:var(--dkgreen)}
+.sec-header{font-family:'Arvo',serif;font-size:1.05em;color:var(--navy);padding:10px 14px;background:linear-gradient(135deg,#e8edf5,#d8e5f5);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;margin:18px 0 12px}
+.q-card{background:var(--lgray);border:2px solid #cdd5e0;border-radius:10px;padding:14px;margin-bottom:12px}.q-card.answered{border-color:#aab5cc}
+.q-num{font-family:'Arvo',serif;font-size:0.8em;color:var(--royal);margin-bottom:5px;font-weight:700}
+.q-text{font-size:0.95em;margin-bottom:8px;line-height:1.5}
+.dia{text-align:center;margin:8px 0;overflow-x:auto}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}
+.opt-btn{font-family:'Inter',sans-serif;font-size:0.9em;padding:10px 8px;background:var(--white);border:2px solid #cdd5e0;border-radius:6px;cursor:pointer;text-align:center;transition:all .2s;color:#1a1a24}
+.opt-btn:hover:not(:disabled){border-color:var(--navy);background:#e8edf5}
+.opt-btn.correct{background:#d4f0d0;border-color:var(--green);color:var(--dkgreen);font-weight:bold}
+.opt-btn.wrong{background:#ffe0e0;border-color:var(--red);color:var(--red)}.opt-btn.reveal{background:#d4f0d0;border-color:var(--green);color:var(--dkgreen)}
+.opt-btn:disabled{cursor:default}
+.feedback{display:none;margin-top:9px;padding:9px 13px;border-radius:6px;font-size:0.88em;line-height:1.5}
+.feedback.show{display:block}.feedback.c{background:#d4f0d0;border:1px solid var(--green);color:var(--dkgreen)}.feedback.w{background:#ffe0e0;border:1px solid var(--red);color:var(--red)}
+.formula-ref{background:var(--navy);color:var(--white);border-radius:10px;padding:14px 18px;margin:12px 0;text-align:center}
+.formula-ref .f{font-family:'Courier New',monospace;font-size:1.15em;color:var(--gold);font-weight:bold}
+.formula-ref p{font-size:0.82em;color:#b8c8e8;margin-top:4px}
+.back-link{display:inline-block;margin-top:20px;padding:10px 22px;background:var(--navy);color:var(--gold);font-family:'Arvo',serif;font-weight:bold;border-radius:8px;text-decoration:none;font-size:0.9em;border:2px solid var(--gold)}.back-link:hover{background:#2a3d6b}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+<div class="nav-container">
+  <span class="nav-title">🦅 <span>IC Imagine</span> 8th Grade Math</span>
+  <a class="nb" href="index.html">🏠 Home</a>
+  <a class="nb" href="unit1.html">U1</a>
+  <a class="nb" href="unit2.html">U2</a>
+  <a class="nb" href="unit3.html">U3</a>
+  <a class="nb" href="unit4.html">U4</a>
+  <a class="nb" href="unit5.html">U5</a>
+  <a class="nb" href="unit6.html">U6</a>
+  <a class="nb" href="unit7.html">U7</a>
+  <a class="nb active" href="unit8.html">U8</a>
+  <a class="nb" href="fluency.html">⚡ Fluency</a>
+  <a class="nb" href="volume.html">📦 Vol</a>
+</div>
+</nav>
+<div class="wrap">
+<div class="page-hdr"><h1>🔄 Unit 8 Practice — Transformations</h1><p>Translations · Reflections · Rotations · Dilations · Congruence &amp; Similarity · NC.8.G.1–4</p></div>
+<div class="score-box"><span>Score: <span class="sv" id="score">0</span></span><span>|</span><span>Answered: <span class="sv" id="answered">0</span> / 12</span></div>
+
+<div class="formula-ref"><div class="f">Reflection: x-axis → (x, −y) · y-axis → (−x, y) · y=x → (y, x)</div><p>90° CW: (x,y)→(y,−x) · 90° CCW: (x,y)→(−y,x) · 180°: (x,y)→(−x,−y) · Dilation: (kx, ky)</p></div>
+<div class="tip"><strong>💡 Tip:</strong> Translations, reflections &amp; rotations are <strong>rigid motions</strong> (preserve size → congruent). Dilations change size (→ similar).</div>
+
+<div class="sec-header">➡️ Translations (NC.8.G.1)</div>
+<div class="q-card" id="8a">
+  <div class="q-num">Problem 8A</div>
+  <div class="q-text">A point is translated by the rule (x + 3, y − 2). If the original point is (1, 5), what is the image?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8a','(4, 3)')">(4, 3)</button>
+    <button class="opt-btn" onclick="mc(this,'8a','(4, 3)')">(−2, 7)</button>
+    <button class="opt-btn" onclick="mc(this,'8a','(4, 3)')">(4, 7)</button>
+    <button class="opt-btn" onclick="mc(this,'8a','(4, 3)')">(1, 3)</button>
+  </div>
+  <div class="feedback">Add 3 to x: 1 + 3 = 4. Subtract 2 from y: 5 − 2 = 3. Image: (4, 3)</div>
+</div>
+
+<div class="sec-header">🪞 Reflections (NC.8.G.3)</div>
+<div class="q-card" id="8b">
+  <div class="q-num">Problem 8B</div>
+  <div class="q-text">What is the image of (−2, 4) reflected over the x-axis?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8b','(−2, −4)')">(−2, −4)</button>
+    <button class="opt-btn" onclick="mc(this,'8b','(−2, −4)')">(2, 4)</button>
+    <button class="opt-btn" onclick="mc(this,'8b','(−2, −4)')">(2, −4)</button>
+    <button class="opt-btn" onclick="mc(this,'8b','(−2, −4)')">(−2, 4)</button>
+  </div>
+  <div class="feedback">Reflect over x-axis: keep x, negate y → (x, −y). So (−2, 4) → (−2, −4)</div>
+</div>
+<div class="q-card" id="8c">
+  <div class="q-num">Problem 8C</div>
+  <div class="q-text">What is the image of (3, −1) reflected over the y-axis?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8c','(−3, −1)')">(−3, −1)</button>
+    <button class="opt-btn" onclick="mc(this,'8c','(−3, −1)')">(3, 1)</button>
+    <button class="opt-btn" onclick="mc(this,'8c','(−3, −1)')">(−3, 1)</button>
+    <button class="opt-btn" onclick="mc(this,'8c','(−3, −1)')">(1, −3)</button>
+  </div>
+  <div class="feedback">Reflect over y-axis: negate x, keep y → (−x, y). So (3, −1) → (−3, −1)</div>
+</div>
+<div class="q-card" id="8k">
+  <div class="q-num">Problem 8K</div>
+  <div class="q-text">What is the image of (−4, 2) reflected over the line y = x?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8k','(2, −4)')">(2, −4)</button>
+    <button class="opt-btn" onclick="mc(this,'8k','(2, −4)')">(−2, 4)</button>
+    <button class="opt-btn" onclick="mc(this,'8k','(2, −4)')">(4, −2)</button>
+    <button class="opt-btn" onclick="mc(this,'8k','(2, −4)')">(−4, −2)</button>
+  </div>
+  <div class="feedback">Reflect over y = x: swap coordinates → (x, y) → (y, x). So (−4, 2) → (2, −4)</div>
+</div>
+
+<div class="sec-header">🔄 Rotations (NC.8.G.3)</div>
+<div class="q-card" id="8d">
+  <div class="q-num">Problem 8D</div>
+  <div class="q-text">Rotate (2, 5) 90° clockwise about the origin. What is the image?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8d','(5, −2)')">(5, −2)</button>
+    <button class="opt-btn" onclick="mc(this,'8d','(5, −2)')">(−5, 2)</button>
+    <button class="opt-btn" onclick="mc(this,'8d','(5, −2)')">(−2, −5)</button>
+    <button class="opt-btn" onclick="mc(this,'8d','(5, −2)')">(5, 2)</button>
+  </div>
+  <div class="feedback">90° clockwise: (x, y) → (y, −x). So (2, 5) → (5, −2)</div>
+</div>
+<div class="q-card" id="8e">
+  <div class="q-num">Problem 8E</div>
+  <div class="q-text">Rotate (−3, 1) 180° about the origin. What is the image?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8e','(3, −1)')">(3, −1)</button>
+    <button class="opt-btn" onclick="mc(this,'8e','(3, −1)')">(−3, −1)</button>
+    <button class="opt-btn" onclick="mc(this,'8e','(3, −1)')">(1, −3)</button>
+    <button class="opt-btn" onclick="mc(this,'8e','(3, −1)')">(3, 1)</button>
+  </div>
+  <div class="feedback">180° rotation: (x, y) → (−x, −y). So (−3, 1) → (3, −1)</div>
+</div>
+<div class="q-card" id="8l">
+  <div class="q-num">Problem 8L</div>
+  <div class="q-text">Rotate (1, 0) 90° counter-clockwise about the origin. What is the image?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8l','(0, 1)')">(0, 1)</button>
+    <button class="opt-btn" onclick="mc(this,'8l','(0, 1)')">(0, −1)</button>
+    <button class="opt-btn" onclick="mc(this,'8l','(0, 1)')">(−1, 0)</button>
+    <button class="opt-btn" onclick="mc(this,'8l','(0, 1)')">(1, 0)</button>
+  </div>
+  <div class="feedback">90° CCW: (x, y) → (−y, x). So (1, 0) → (0, 1)</div>
+</div>
+
+<div class="sec-header">🔍 Dilations (NC.8.G.3)</div>
+<div class="q-card" id="8f">
+  <div class="q-num">Problem 8F</div>
+  <div class="q-text">A triangle is dilated by scale factor k = 2, centered at the origin. Point A(3, 4) maps to:</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8f','(6, 8)')">(6, 8)</button>
+    <button class="opt-btn" onclick="mc(this,'8f','(6, 8)')">(1.5, 2)</button>
+    <button class="opt-btn" onclick="mc(this,'8f','(6, 8)')">(5, 6)</button>
+    <button class="opt-btn" onclick="mc(this,'8f','(6, 8)')">(3, 4)</button>
+  </div>
+  <div class="feedback">Dilation: multiply each coordinate by k. (3×2, 4×2) = (6, 8)</div>
+</div>
+<div class="q-card" id="8g">
+  <div class="q-num">Problem 8G</div>
+  <div class="q-text">A figure is dilated by scale factor k = ½. The original side length is 10 cm. What is the image side length?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8g','5 cm')">5 cm</button>
+    <button class="opt-btn" onclick="mc(this,'8g','5 cm')">20 cm</button>
+    <button class="opt-btn" onclick="mc(this,'8g','5 cm')">10 cm</button>
+    <button class="opt-btn" onclick="mc(this,'8g','5 cm')">2.5 cm</button>
+  </div>
+  <div class="feedback">Multiply by scale factor: 10 × ½ = 5 cm. Scale factor < 1 makes it smaller.</div>
+</div>
+
+<div class="sec-header">🧩 Congruence &amp; Similarity (NC.8.G.2, NC.8.G.4)</div>
+<div class="q-card" id="8h">
+  <div class="q-num">Problem 8H</div>
+  <div class="q-text">Which transformation changes the SIZE of a figure?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8h','Dilation')">Translation</button>
+    <button class="opt-btn" onclick="mc(this,'8h','Dilation')">Reflection</button>
+    <button class="opt-btn" onclick="mc(this,'8h','Dilation')">Rotation</button>
+    <button class="opt-btn" onclick="mc(this,'8h','Dilation')">Dilation</button>
+  </div>
+  <div class="feedback">Only dilations change size! Translations, reflections, and rotations preserve size (they are rigid motions).</div>
+</div>
+<div class="q-card" id="8i">
+  <div class="q-num">Problem 8I</div>
+  <div class="q-text">A figure is translated, then reflected. The result is:</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8i','Congruent to the original')">Congruent to the original</button>
+    <button class="opt-btn" onclick="mc(this,'8i','Congruent to the original')">Similar but not congruent</button>
+    <button class="opt-btn" onclick="mc(this,'8i','Congruent to the original')">Smaller than the original</button>
+    <button class="opt-btn" onclick="mc(this,'8i','Congruent to the original')">Larger than the original</button>
+  </div>
+  <div class="feedback">Translations and reflections are rigid motions — they preserve both size and shape → congruent.</div>
+</div>
+<div class="q-card" id="8j">
+  <div class="q-num">Problem 8J</div>
+  <div class="q-text">Triangle A has sides 3, 4, 5. Triangle B has sides 6, 8, 10. What transformation maps A to B?</div>
+  <div class="opts">
+    <button class="opt-btn" onclick="mc(this,'8j','Dilation with k = 2')">Dilation with k = 2</button>
+    <button class="opt-btn" onclick="mc(this,'8j','Dilation with k = 2')">Translation</button>
+    <button class="opt-btn" onclick="mc(this,'8j','Dilation with k = 2')">Reflection</button>
+    <button class="opt-btn" onclick="mc(this,'8j','Dilation with k = 2')">Rotation</button>
+  </div>
+  <div class="feedback">Each side doubled: 3→6, 4→8, 5→10. Scale factor k = 2 dilation.</div>
+</div>
+
+</div>
+<script>
+var ts=0,ta=0;
+function mc(btn,qid,correct){
+  var card=document.getElementById(qid);
+  if(card.classList.contains('answered'))return;
+  card.classList.add('answered');
+  var btns=card.querySelectorAll('.opt-btn');
+  var fb=card.querySelector('.feedback');
+  btns.forEach(function(b){b.disabled=true});
+  ta++;
+  if(btn.textContent.trim()===correct.trim()){
+    btn.classList.add('correct');
+    fb.className='feedback show c';
+    fb.textContent='✓ Correct! '+fb.textContent;
+    ts++;
+  }else{
+    btn.classList.add('wrong');
+    btns.forEach(function(b){if(b.textContent.trim()===correct.trim())b.classList.add('reveal')});
+    fb.className='feedback show w';
+    fb.textContent='✗ The answer is '+correct+'. '+fb.textContent;
+  }
+  document.getElementById('score').textContent=ts;
+  document.getElementById('answered').textContent=ta;
+}
+</script>
+
+<div class="lesson-section" style="border-color:#FFC107">
+<h2 style="color:#FFC107">📝 Worked Examples</h2>
+<p style="color:#4a4a5a;font-size:0.9em;margin-bottom:12px">Study these step-by-step solutions before attempting the problems above.</p>
+<div style="background:#f8f9fc;border:2px solid #0056B3;border-radius:8px;padding:14px;margin-bottom:12px">
+<div style="font-family:Arvo,serif;font-size:1em;color:#1E2D4F;margin-bottom:8px;font-weight:bold">Composite: translate (2,5) by (x−3,y+1), then reflect over x-axis</div>
+<div class="study-step" id="u8pw0-s0"><div style="font-weight:bold;color:#0056B3;font-size:0.85em">Step 1: Translate: (2−3, 5+1)</div><div style="font-family:Courier New,monospace;background:#e8edf5;padding:6px 10px;border-radius:4px;margin:4px 0">(−1, 6)</div></div>
+<div class="study-step" id="u8pw0-s1" ><div style="font-weight:bold;color:#0056B3;font-size:0.85em">Step 2: Reflect x-axis: (x, −y)</div><div style="font-family:Courier New,monospace;background:#e8edf5;padding:6px 10px;border-radius:4px;margin:4px 0">(−1, −6)</div></div>
+<div class="study-step" id="u8pw0-s2" ><div style="font-weight:bold;color:#0056B3;font-size:0.85em">Step 3: Final answer</div><div style="font-family:Courier New,monospace;background:#e8edf5;padding:6px 10px;border-radius:4px;margin:4px 0">(2,5) → (−1,6) → (−1,−6) ✓</div></div>
+
+</div>
+<h2 style="color:#cc2222;margin-top:18px">🔍 Common Mistakes</h2>
+<p style="color:#4a4a5a;font-size:0.9em;margin-bottom:12px">Can you spot what went wrong?</p>
+<div style="background:#fff;border:2px solid #cc2222;border-radius:8px;padding:14px;margin-bottom:12px">
+<div style="font-weight:bold;color:#1E2D4F;margin-bottom:6px">Rotate (3,−2) by 90° CCW</div>
+<div style="background:#ffe0e0;padding:8px 10px;border-radius:4px;margin:6px 0;font-family:Courier New,monospace;border-left:4px solid #cc2222"><strong style="color:#cc2222">✗ Student:</strong> Student writes: (−2, 3)</div>
+<div style="background:#d4f0d0;padding:8px 10px;border-radius:4px;margin:6px 0;border-left:4px solid #22AC00"><strong style="color:#1a7000">✓ Fix:</strong> WRONG! Rule is (−y, x). y=−2, so −y = 2. Correct: (2, 3)</div>
+<div style="font-size:0.85em;color:#0056B3;font-style:italic">💡 Be careful with negatives in rotation rules. −(−2) = +2.</div>
+</div>
+<div style="background:#fff;border:2px solid #cc2222;border-radius:8px;padding:14px;margin-bottom:12px">
+<div style="font-weight:bold;color:#1E2D4F;margin-bottom:6px">Dilate (4,6) by k=½</div>
+<div style="background:#ffe0e0;padding:8px 10px;border-radius:4px;margin:6px 0;font-family:Courier New,monospace;border-left:4px solid #cc2222"><strong style="color:#cc2222">✗ Student:</strong> Student writes: (2, 8)</div>
+<div style="background:#d4f0d0;padding:8px 10px;border-radius:4px;margin:6px 0;border-left:4px solid #22AC00"><strong style="color:#1a7000">✓ Fix:</strong> WRONG! ½ × 4 = 2 ✓ but ½ × 6 = 3, not 8. Correct: (2, 3)</div>
+<div style="font-size:0.85em;color:#0056B3;font-style:italic">💡 Multiply BOTH coordinates by the scale factor.</div>
+</div>
+<h2 style="color:#22AC00;margin-top:18px">⚡ Key Tips for This Unit</h2>
+<div style="background:#e8f5e2;border:2px solid #22AC00;border-radius:8px;padding:14px">
+<div style="padding:4px 0;font-size:0.92em">✅ Translation: (x+a, y+b) — slide. CONGRUENT.</div>
+<div style="padding:4px 0;font-size:0.92em">✅ Reflection: x-axis → negate y. y-axis → negate x. CONGRUENT.</div>
+<div style="padding:4px 0;font-size:0.92em">✅ Rotation 90° CCW: (−y, x). 180°: (−x,−y). 270° CCW: (y,−x). CONGRUENT.</div>
+<div style="padding:4px 0;font-size:0.92em">✅ Dilation: (kx, ky). SIMILAR (not congruent unless k=1).</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ═══ KINGFISHER AI TUTOR ═══ -->
+<style>
+#kf-tutor-bubble{position:fixed;bottom:24px;right:24px;z-index:9999;font-family:'Inter','Nunito',system-ui,sans-serif;}
+#kf-tutor-toggle{width:60px;height:60px;border-radius:50%;background:#FFC107;color:#1E2D4F;border:none;cursor:pointer;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:all .2s;display:flex;align-items:center;justify-content:center;}
+#kf-tutor-toggle:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(0,0,0,.3);}
+#kf-tutor-panel{position:absolute;bottom:74px;right:0;width:370px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.22);border:1px solid #e2e8f0;display:none;flex-direction:column;overflow:hidden;max-height:520px;}
+#kf-tutor-panel.open{display:flex;}
+.kf-header{background:#1E2D4F;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px;}
+.kf-avatar{width:36px;height:36px;background:#FFC107;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.kf-header h3{font-size:.95rem;font-weight:800;margin:0;}.kf-header p{font-size:.72rem;color:#FFC107;font-weight:600;margin:0;}
+#kf-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:200px;max-height:340px;}
+.kf-msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:.85rem;line-height:1.5;font-weight:600;}
+.kf-msg.user{background:#f0f4ff;border:1px solid #c7d2fe;align-self:flex-end;border-bottom-right-radius:4px;color:#1a1a2e;}
+.kf-msg.bot{background:#f4f4f4;border:1px solid #e2e8f0;align-self:flex-start;border-bottom-left-radius:4px;color:#1a1a2e;}
+.kf-msg.bot.thinking{color:#64748b;font-style:italic;}
+.kf-input-row{display:flex;gap:8px;padding:12px;border-top:1px solid #e2e8f0;}
+#kf-input{flex:1;border:2px solid #e2e8f0;border-radius:9px;padding:9px 12px;font-family:'Inter','Nunito',system-ui,sans-serif;font-size:.85rem;font-weight:600;outline:none;color:#1a1a2e;}
+#kf-input:focus{border-color:#1E2D4F;}
+#kf-send{background:#1E2D4F;color:#fff;border:none;border-radius:9px;padding:9px 14px;cursor:pointer;font-family:'Inter','Nunito',system-ui,sans-serif;font-weight:800;font-size:.82rem;transition:.2s;}
+#kf-send:hover{background:#2a3d6b;}
+#kf-send:disabled{opacity:.5;cursor:not-allowed;}
+@media(max-width:480px){#kf-tutor-panel{width:calc(100vw - 32px);right:-8px;}}
+</style>
+<div id="kf-tutor-bubble">
+  <div id="kf-tutor-panel">
+    <div class="kf-header">
+      <div class="kf-avatar">🦅</div>
+      <div><h3>Kingfisher Tutor</h3><p>IC IMAGINE MATH HELPER</p></div>
+    </div>
+    <div id="kf-messages">
+      <div class="kf-msg bot">Hi! I\'m your Kingfisher Tutor 🦅 Ask me anything about the math on this page!</div>
+    </div>
+    <div class="kf-input-row">
+      <input id="kf-input" type="text" placeholder="Ask a math question..." onkeydown="if(event.key===\'Enter\')kfSend()">
+      <button id="kf-send" onclick="kfSend()">Send</button>
+    </div>
+  </div>
+  <button id="kf-tutor-toggle" onclick="kfToggle()" title="Kingfisher Tutor">🦅</button>
+</div>
+<script>
+(function(){
+  var kfOpen=false, kfHistory=[];
+  window.kfToggle=function(){
+    kfOpen=!kfOpen;
+    document.getElementById('kf-tutor-panel').classList.toggle('open',kfOpen);
+    var t=document.getElementById('kf-tutor-toggle');
+    t.textContent=kfOpen?'\u2715':'\ud83e\udd85';
+    t.style.fontSize=kfOpen?'22px':'26px';
+  };
+  function kfAddMsg(role,text){
+    var div=document.getElementById('kf-messages');
+    var msg=document.createElement('div');
+    msg.className='kf-msg '+role;
+    msg.textContent=text;
+    div.appendChild(msg);
+    div.scrollTop=div.scrollHeight;
+    return msg;
+  }
+  window.kfSend=async function(){
+    var input=document.getElementById('kf-input');
+    var text=input.value.trim();
+    if(!text) return;
+    input.value='';
+    kfAddMsg('user',text);
+    kfHistory.push({role:'user',content:text});
+    var sendBtn=document.getElementById('kf-send');
+    sendBtn.disabled=true;
+    var thinking=kfAddMsg('bot thinking','\ud83e\udd85 Thinking...');
+    var sys=`You are the Kingfisher Tutor for IC Imagine. Helping with Unit 8 Practice: Transformations (translations, reflections, rotations, dilations, congruence, similarity). NC.8.G.1-4. Give hints not answers. 2-4 sentences. Warm and encouraging.`;
+    try{
+      var resp=await fetch('https://api.anthropic.com/v1/messages',{
+        method:'POST',headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+        body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,system:sys,messages:kfHistory.slice(-8)})
+      });
+      if(!resp.ok){
+        thinking.remove();
+        if(resp.status===401){
+          kfAddMsg('bot','The Kingfisher Tutor needs an API key to work. Ask your teacher for help setting this up! 🔑');
+        } else {
+          kfAddMsg('bot','Hmm, I hit a snag (error '+resp.status+'). Try again in a moment! 🔄');
+        }
+        sendBtn.disabled=false;
+        return;
+      }
+      var data=await resp.json();
+      var reply=(data.content && data.content[0] && data.content[0].text) || 'Sorry, connection issue — try again!';
+      thinking.remove();
+      kfAddMsg('bot',reply);
+      kfHistory.push({role:'assistant',content:reply});
+    }catch(e){
+      thinking.remove();
+      kfAddMsg('bot','Connection hiccup! Check your internet and try again. \ud83d\udd04');
+    }
+    sendBtn.disabled=false;
+  };
+})();
+</script>
+<!-- ═══ END KINGFISHER AI TUTOR ═══ -->
+
+</body>
+</html>
