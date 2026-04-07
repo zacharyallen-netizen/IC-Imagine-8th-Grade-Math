@@ -310,9 +310,9 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 
 </div>
 <div id="t-52" class="tab-pane">
-<div class="lesson-section" style="border-color:#1E2D4F">
-<h2 style="color:#1E2D4F">5.2 Finding the Hypotenuse</h2>
-<div class="key-concept"><strong>🔑 WHEN TO USE:</strong> When you know BOTH LEGS and need to find the HYPOTENUSE.</div>
+
+<h2 style="color:#1E2D4F;font-family:Arvo,serif;">5.2 Finding the Hypotenuse</h2>
+<div class="key-concept"><strong>🔑 WHEN TO USE:</strong> When you know BOTH LEGS and need to find the HYPOTENUSE.<br>Formula: <strong>a² + b² = c²</strong> → solve for c</div>
 
 <div class="example-box"><h4>Example: Legs are 6 and 8. Find the hypotenuse.</h4>
 <div class="example-step"><strong>Step 1:</strong> Write the formula: a² + b² = c²</div>
@@ -320,340 +320,535 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step"><strong>Step 3:</strong> Square the numbers: 36 + 64 = c²</div>
 <div class="example-step"><strong>Step 4:</strong> Add: 100 = c²</div>
 <div class="example-step"><strong>Step 5:</strong> Take square root: √100 = c</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2);border-left-color:#22AC00"><strong>Answer:</strong> c = 10 ✓</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Answer: c = 10 ✓</strong></div>
+</div>
 
-<h3 style="color:#FFC107">Practice Problems — Solve for the Hypotenuse</h3>
+<h3 style="color:#FFC107;margin-top:18px;">Practice — Solve for the Hypotenuse</h3>
+<div class="progress-wrap">
+<span class="progress-label">Progress:</span>
+<div class="progress-bar-outer"><div class="progress-bar-inner" id="prog52" style="width:0%"></div></div>
+<span class="score-display" id="score52">0 / 4</span>
+<button class="check-all-btn" onclick="checkAllSec('52')">Check All</button>
+<button class="reset-btn" onclick="resetSec('52')">Reset</button>
+</div>
+<div class="problems-grid">
+<div class="problem-card">
+<div class="problem-num">Question 1</div>
 <div class="diagram-box">
-<svg width="520" height="480" viewBox="0 0 520 480">
-<text x="260" y="22" fill="#1E2D4F" font-family="Arvo" font-size="14" text-anchor="middle" font-weight="bold">Find the Hypotenuse (c)</text>
-<!-- Problem 1: legs 3, 4 -->
-<text x="30" y="55" fill="#FFC107" font-size="13" font-weight="bold">1)</text>
-<polygon points="50,85 170,200 50,200" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="50" y="185" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="38" y="150" fill="#1E2D4F" font-size="14" font-weight="bold">4</text>
-<text x="105" y="218" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">3</text>
-<text x="125" y="135" fill="#cc2222" font-size="13" font-weight="bold">c = ?</text>
-<rect x="185" y="100" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="220" y="119" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">c = 5</text>
-<text x="185" y="145" fill="#5a5a6a" font-size="10">3²+4²=9+16=25</text>
-<text x="185" y="160" fill="#5a5a6a" font-size="10">√25 = 5</text>
-<!-- Problem 2: legs 6, 8 -->
-<text x="290" y="55" fill="#FFC107" font-size="13" font-weight="bold">2)</text>
-<polygon points="310,85 440,200 310,200" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="310" y="185" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="298" y="150" fill="#1E2D4F" font-size="14" font-weight="bold">8</text>
-<text x="375" y="218" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">6</text>
-<text x="388" y="135" fill="#cc2222" font-size="13" font-weight="bold">c = ?</text>
-<rect x="445" y="100" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="480" y="119" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">c = 10</text>
-<text x="445" y="145" fill="#5a5a6a" font-size="10">6²+8²=36+64=100</text>
-<text x="445" y="160" fill="#5a5a6a" font-size="10">√100 = 10</text>
-<!-- Problem 3: legs 5, 12 -->
-<text x="30" y="265" fill="#FFC107" font-size="13" font-weight="bold">3)</text>
-<polygon points="50,290 170,420 50,420" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="50" y="405" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="38" y="365" fill="#1E2D4F" font-size="14" font-weight="bold">12</text>
-<text x="105" y="438" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">5</text>
-<text x="125" y="345" fill="#cc2222" font-size="13" font-weight="bold">c = ?</text>
-<rect x="185" y="320" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="220" y="339" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">c = 13</text>
-<text x="185" y="365" fill="#5a5a6a" font-size="10">5²+12²=25+144=169</text>
-<text x="185" y="380" fill="#5a5a6a" font-size="10">√169 = 13</text>
-<!-- Problem 4: legs 8, 15 -->
-<text x="290" y="265" fill="#FFC107" font-size="13" font-weight="bold">4)</text>
-<polygon points="310,290 440,420 310,420" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="310" y="405" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="298" y="365" fill="#1E2D4F" font-size="14" font-weight="bold">15</text>
-<text x="375" y="438" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">8</text>
-<text x="388" y="345" fill="#cc2222" font-size="13" font-weight="bold">c = ?</text>
-<rect x="445" y="320" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="480" y="339" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">c = 17</text>
-<text x="445" y="365" fill="#5a5a6a" font-size="10">8²+15²=64+225=289</text>
-<text x="445" y="380" fill="#5a5a6a" font-size="10">√289 = 17</text>
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#1E2D4F" font-size="16" font-weight="bold" text-anchor="middle" font-family="Arvo">3</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">4</text>
+<text x="75" y="75" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = ?</text>
 </svg>
+</div>
+<div class="problem-text">A right triangle has legs of <strong>3</strong> and <strong>4</strong>. Find the hypotenuse.</div>
+<div class="answer-line">Answer: c = <input class="answer-input" id="p52_1" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p52','1','5')">Check ✓</button>
+<div class="p-feedback" id="fbp52_1"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 2</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#1E2D4F" font-size="16" font-weight="bold" text-anchor="middle" font-family="Arvo">6</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">8</text>
+<text x="75" y="75" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = ?</text>
+</svg>
+</div>
+<div class="problem-text">A right triangle has legs of <strong>6</strong> and <strong>8</strong>. Find the hypotenuse.</div>
+<div class="answer-line">Answer: c = <input class="answer-input" id="p52_2" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p52','2','10')">Check ✓</button>
+<div class="p-feedback" id="fbp52_2"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 3</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#1E2D4F" font-size="16" font-weight="bold" text-anchor="middle" font-family="Arvo">5</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">12</text>
+<text x="75" y="75" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = ?</text>
+</svg>
+</div>
+<div class="problem-text">A right triangle has legs of <strong>5</strong> and <strong>12</strong>. Find the hypotenuse.</div>
+<div class="answer-line">Answer: c = <input class="answer-input" id="p52_3" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p52','3','13')">Check ✓</button>
+<div class="p-feedback" id="fbp52_3"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 4</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#1E2D4F" font-size="16" font-weight="bold" text-anchor="middle" font-family="Arvo">8</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">15</text>
+<text x="75" y="75" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = ?</text>
+</svg>
+</div>
+<div class="problem-text">A right triangle has legs of <strong>8</strong> and <strong>15</strong>. Find the hypotenuse.</div>
+<div class="answer-line">Answer: c = <input class="answer-input" id="p52_4" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p52','4','17')">Check ✓</button>
+<div class="p-feedback" id="fbp52_4"></div>
 </div>
 </div>
 </div>
 
 </div>
 <div id="t-53" class="tab-pane">
-<div class="lesson-section" style="border-color:#1E2D4F">
-<h2 style="color:#1E2D4F">5.3 Finding a Missing Leg</h2>
-<div class="key-concept"><strong>🔑 WHEN TO USE:</strong> When you know ONE LEG and the HYPOTENUSE, and need to find the OTHER LEG.</div>
+
+<h2 style="color:#1E2D4F;font-family:Arvo,serif;">5.3 Finding a Missing Leg</h2>
+<div class="key-concept"><strong>🔑 WHEN TO USE:</strong> When you know ONE LEG and the HYPOTENUSE, and need the OTHER LEG.<br>Rearrange: <strong>a² = c² − b²</strong></div>
 
 <div class="example-box"><h4>Example: One leg is 5, hypotenuse is 13. Find the other leg.</h4>
 <div class="example-step"><strong>Step 1:</strong> Write the formula: a² + b² = c²</div>
-<div class="example-step"><strong>Step 2:</strong> Substitute what you know: 5² + b² = 13²</div>
-<div class="example-step"><strong>Step 3:</strong> Square the numbers: 25 + b² = 169</div>
+<div class="example-step"><strong>Step 2:</strong> Substitute: 5² + b² = 13²</div>
+<div class="example-step"><strong>Step 3:</strong> Square: 25 + b² = 169</div>
 <div class="example-step"><strong>Step 4:</strong> Subtract 25 from both sides: b² = 169 − 25</div>
 <div class="example-step"><strong>Step 5:</strong> Simplify: b² = 144</div>
 <div class="example-step"><strong>Step 6:</strong> Take square root: b = √144</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2);border-left-color:#22AC00"><strong>Answer:</strong> b = 12 ✓</div>
-
-<h3 style="color:#FFC107">Practice Problems — Solve for a Missing Leg</h3>
-<div class="diagram-box">
-<svg width="520" height="480" viewBox="0 0 520 480">
-<text x="260" y="22" fill="#1E2D4F" font-family="Arvo" font-size="14" text-anchor="middle" font-weight="bold">Find the Missing Leg (a)</text>
-<!-- Problem 1: c=5, b=4, a=? (a=3) -->
-<text x="30" y="55" fill="#FFC107" font-size="13" font-weight="bold">1)</text>
-<polygon points="50,85 170,200 50,200" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="50" y="185" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="38" y="150" fill="#1E2D4F" font-size="14" font-weight="bold">4</text>
-<text x="105" y="218" fill="#22AC00" font-size="13" font-weight="bold" text-anchor="middle">a = ?</text>
-<text x="125" y="135" fill="#cc2222" font-size="13" font-weight="bold">c = 5</text>
-<rect x="185" y="100" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="220" y="119" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">a = 3</text>
-<text x="185" y="145" fill="#5a5a6a" font-size="10">a²+16=25</text>
-<text x="185" y="160" fill="#5a5a6a" font-size="10">a²=9, a=3</text>
-<!-- Problem 2: c=13, b=5, a=? (a=12) -->
-<text x="290" y="55" fill="#FFC107" font-size="13" font-weight="bold">2)</text>
-<polygon points="310,85 440,200 310,200" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="310" y="185" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="298" y="150" fill="#1E2D4F" font-size="14" font-weight="bold">5</text>
-<text x="375" y="218" fill="#22AC00" font-size="13" font-weight="bold" text-anchor="middle">a = ?</text>
-<text x="388" y="135" fill="#cc2222" font-size="13" font-weight="bold">c = 13</text>
-<rect x="445" y="100" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="480" y="119" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">a = 12</text>
-<text x="445" y="145" fill="#5a5a6a" font-size="10">a²+25=169</text>
-<text x="445" y="160" fill="#5a5a6a" font-size="10">a²=144, a=12</text>
-<!-- Problem 3: c=17, b=8, a=? (a=15) -->
-<text x="30" y="265" fill="#FFC107" font-size="13" font-weight="bold">3)</text>
-<polygon points="50,290 170,420 50,420" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="50" y="405" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="38" y="365" fill="#1E2D4F" font-size="14" font-weight="bold">8</text>
-<text x="105" y="438" fill="#22AC00" font-size="13" font-weight="bold" text-anchor="middle">a = ?</text>
-<text x="125" y="345" fill="#cc2222" font-size="13" font-weight="bold">c = 17</text>
-<rect x="185" y="320" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="220" y="339" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">a = 15</text>
-<text x="185" y="365" fill="#5a5a6a" font-size="10">a²+64=289</text>
-<text x="185" y="380" fill="#5a5a6a" font-size="10">a²=225, a=15</text>
-<!-- Problem 4: c=25, b=24, a=? (a=7) -->
-<text x="290" y="265" fill="#FFC107" font-size="13" font-weight="bold">4)</text>
-<polygon points="310,290 440,420 310,420" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="310" y="405" width="12" height="12" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="298" y="365" fill="#1E2D4F" font-size="14" font-weight="bold">24</text>
-<text x="375" y="438" fill="#22AC00" font-size="13" font-weight="bold" text-anchor="middle">a = ?</text>
-<text x="388" y="345" fill="#cc2222" font-size="13" font-weight="bold">c = 25</text>
-<rect x="445" y="320" width="70" height="28" fill="rgba(34,172,0,0.15)" stroke="#22AC00" stroke-width="2" rx="6"/>
-<text x="480" y="339" fill="#22AC00" font-size="14" text-anchor="middle" font-weight="bold">a = 7</text>
-<text x="445" y="365" fill="#5a5a6a" font-size="10">a²+576=625</text>
-<text x="445" y="380" fill="#5a5a6a" font-size="10">a²=49, a=7</text>
-</svg>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>Answer: b = 12 ✓</strong></div>
 </div>
 
-<div class="warning-box"><strong>⚠️ REMEMBER:</strong> When finding a LEG, you <strong>SUBTRACT</strong> from the hypotenuse squared. When finding the HYPOTENUSE, you <strong>ADD</strong> the two legs squared.</div>
+<div class="warning-box"><strong>⚠️ REMEMBER:</strong> When finding a LEG, you <strong>SUBTRACT</strong> from the hypotenuse². When finding the HYPOTENUSE, you <strong>ADD</strong> the two legs².</div>
+
+<h3 style="color:#FFC107;margin-top:18px;">Practice — Solve for a Missing Leg</h3>
+<div class="progress-wrap">
+<span class="progress-label">Progress:</span>
+<div class="progress-bar-outer"><div class="progress-bar-inner" id="prog53" style="width:0%"></div></div>
+<span class="score-display" id="score53">0 / 4</span>
+<button class="check-all-btn" onclick="checkAllSec('53')">Check All</button>
+<button class="reset-btn" onclick="resetSec('53')">Reset</button>
+</div>
+<div class="problems-grid">
+<div class="problem-card">
+<div class="problem-num">Question 1</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#22AC00" font-size="15" font-weight="bold" text-anchor="middle" font-family="Arvo">a = ?</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">4</text>
+<text x="70" y="70" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = 5</text>
+</svg>
+</div>
+<div class="problem-text">Hypotenuse = <strong>5</strong>, one leg = <strong>4</strong>. Find the missing leg.</div>
+<div class="answer-line">Answer: a = <input class="answer-input" id="p53_1" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p53','1','3')">Check ✓</button>
+<div class="p-feedback" id="fbp53_1"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 2</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#22AC00" font-size="15" font-weight="bold" text-anchor="middle" font-family="Arvo">a = ?</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">5</text>
+<text x="70" y="70" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = 13</text>
+</svg>
+</div>
+<div class="problem-text">Hypotenuse = <strong>13</strong>, one leg = <strong>5</strong>. Find the missing leg.</div>
+<div class="answer-line">Answer: a = <input class="answer-input" id="p53_2" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p53','2','12')">Check ✓</button>
+<div class="p-feedback" id="fbp53_2"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 3</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#22AC00" font-size="15" font-weight="bold" text-anchor="middle" font-family="Arvo">a = ?</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">8</text>
+<text x="70" y="70" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = 17</text>
+</svg>
+</div>
+<div class="problem-text">Hypotenuse = <strong>17</strong>, one leg = <strong>8</strong>. Find the missing leg.</div>
+<div class="answer-line">Answer: a = <input class="answer-input" id="p53_3" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p53','3','15')">Check ✓</button>
+<div class="p-feedback" id="fbp53_3"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 4</div>
+<div class="diagram-box">
+<svg width="220" height="170" viewBox="0 0 220 170">
+<polygon points="30,140 170,140 170,30" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="155" y="125" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="100" y="160" fill="#22AC00" font-size="15" font-weight="bold" text-anchor="middle" font-family="Arvo">a = ?</text>
+<text x="180" y="90" fill="#1E2D4F" font-size="16" font-weight="bold" font-family="Arvo">24</text>
+<text x="70" y="70" fill="#cc2222" font-size="15" font-weight="bold" font-family="Arvo">c = 25</text>
+</svg>
+</div>
+<div class="problem-text">Hypotenuse = <strong>25</strong>, one leg = <strong>24</strong>. Find the missing leg.</div>
+<div class="answer-line">Answer: a = <input class="answer-input" id="p53_4" type="text" placeholder="?"> units
+<br><button class="check-answer-btn" onclick="checkQ('p53','4','7')">Check ✓</button>
+<div class="p-feedback" id="fbp53_4"></div>
+</div>
 </div>
 </div>
 
 </div>
 <!-- ═══ 5.4 CONVERSE OF THE PYTHAGOREAN THEOREM ═══ -->
 <div id="t-54" class="tab-pane">
-<div class="lesson-section" style="border-color:#FFC107">
-<h2 style="color:#FFC107">5.4 Converse of the Pythagorean Theorem</h2>
-<div class="key-concept"><strong>🔑 THE CONVERSE:</strong> Given three side lengths a ≤ b ≤ c, plug them into the formula and check: does <span style="color:#FFC107;font-size:1.1em">a² + b² = c²</span>?<br>If <strong style="color:#22AC00">yes → right triangle</strong>. If <strong style="color:#cc2222">no → not a right triangle</strong>.<br>Always test the two <strong>SMALLER</strong> sides against the <strong>LARGEST</strong>.</div>
 
-<h3 style="color:#1E2D4F">Worked Examples</h3>
+<h2 style="color:#FFC107;font-family:Arvo,serif;">5.4 Converse of the Pythagorean Theorem</h2>
+<div class="key-concept"><strong>🔑 THE CONVERSE:</strong> Given three side lengths a ≤ b ≤ c, plug them into the formula and check: does <span style="color:#FFC107;font-size:1.1em">a² + b² = c²</span>?<br>
+If <strong style="color:#22AC00">yes → right triangle</strong>. If <strong style="color:#cc2222">no → not a right triangle</strong>.<br>
+Always test the two <strong>SMALLER</strong> sides against the <strong>LARGEST</strong>.</div>
+
+<div class="example-box"><h4>Example: Sides 5, 12, 13 — Is it a right triangle?</h4>
+<div class="example-step"><strong>Step 1:</strong> Identify largest side: c = 13</div>
+<div class="example-step"><strong>Step 2:</strong> Test: a² + b² = c²? → 5² + 12² = 13²?</div>
+<div class="example-step"><strong>Step 3:</strong> Calculate: 25 + 144 = 169</div>
+<div class="example-step"><strong>Step 4:</strong> Check: c² = 13² = 169</div>
+<div class="example-step"><strong>Step 5:</strong> Compare: 169 = 169 ✓</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>YES — it IS a right triangle! ✓</strong></div>
+</div>
+
+<h3 style="color:#FFC107;margin-top:18px;">Practice — Is It a Right Triangle?</h3>
+<div class="progress-wrap">
+<span class="progress-label">Progress:</span>
+<div class="progress-bar-outer"><div class="progress-bar-inner" id="prog54" style="width:0%"></div></div>
+<span class="score-display" id="score54">0 / 4</span>
+<button class="check-all-btn" onclick="checkAllSec('54')">Check All</button>
+<button class="reset-btn" onclick="resetSec('54')">Reset</button>
+</div>
+<div class="problems-grid">
+<div class="problem-card">
+<div class="problem-num">Question 1</div>
 <div class="diagram-box">
-<svg width="520" height="490" viewBox="0 0 520 490">
-<text x="260" y="22" fill="#1E2D4F" font-family="Arvo" font-size="14" text-anchor="middle" font-weight="bold">Is It a Right Triangle? Test a² + b² = c²</text>
-<!-- Problem 1: 3,4,5 = YES -->
-<text x="30" y="55" fill="#FFC107" font-size="13" font-weight="bold">1)</text>
-<polygon points="50,80 160,190 50,190" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<text x="100" y="208" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">3</text>
-<text x="38" y="140" fill="#1E2D4F" font-size="14" font-weight="bold">4</text>
-<text x="120" y="128" fill="#cc2222" font-size="13" font-weight="bold">5</text>
-<text x="185" y="85" fill="#1a1a24" font-size="11">Sides: 3, 4, 5</text>
-<text x="185" y="105" fill="#1a1a24" font-size="11">3² + 4² = 9 + 16 = 25</text>
-<text x="185" y="125" fill="#1a1a24" font-size="11">5² = 25</text>
-<text x="185" y="145" fill="#22AC00" font-size="13" font-weight="bold">25 = 25 ✓ YES — Right Triangle!</text>
-<!-- Problem 2: 2,3,4 = NO -->
-<text x="290" y="55" fill="#FFC107" font-size="13" font-weight="bold">2)</text>
-<polygon points="310,80 430,190 350,190" fill="rgba(204,34,34,0.06)" stroke="#cc2222" stroke-width="2.5"/>
-<text x="380" y="208" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">4</text>
-<text x="320" y="145" fill="#1E2D4F" font-size="14" font-weight="bold">2</text>
-<text x="385" y="128" fill="#1E2D4F" font-size="14" font-weight="bold">3</text>
-<text x="185" y="175" fill="#1a1a24" font-size="11">Sides: 2, 3, 4</text>
-<text x="185" y="195" fill="#1a1a24" font-size="11">2² + 3² = 4 + 9 = 13</text>
-<text x="185" y="215" fill="#1a1a24" font-size="11">4² = 16</text>
-<text x="185" y="235" fill="#cc2222" font-size="13" font-weight="bold">13 ≠ 16 ✗ NO — Not a Right Triangle</text>
-<!-- Problem 3: 5,12,13 = YES -->
-<text x="30" y="275" fill="#FFC107" font-size="13" font-weight="bold">3)</text>
-<polygon points="50,300 170,420 50,420" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<text x="105" y="438" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">5</text>
-<text x="38" y="370" fill="#1E2D4F" font-size="14" font-weight="bold">12</text>
-<text x="125" y="350" fill="#cc2222" font-size="13" font-weight="bold">13</text>
-<text x="185" y="310" fill="#1a1a24" font-size="11">Sides: 5, 12, 13</text>
-<text x="185" y="330" fill="#1a1a24" font-size="11">5² + 12² = 25 + 144 = 169</text>
-<text x="185" y="350" fill="#1a1a24" font-size="11">13² = 169</text>
-<text x="185" y="370" fill="#22AC00" font-size="13" font-weight="bold">169 = 169 ✓ YES — Right Triangle!</text>
-<!-- Problem 4: 6,7,10 = NO -->
-<text x="290" y="275" fill="#FFC107" font-size="13" font-weight="bold">4)</text>
-<polygon points="310,300 440,420 355,420" fill="rgba(204,34,34,0.06)" stroke="#cc2222" stroke-width="2.5"/>
-<text x="390" y="438" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle">6</text>
-<text x="320" y="370" fill="#1E2D4F" font-size="14" font-weight="bold">7</text>
-<text x="395" y="350" fill="#1E2D4F" font-size="14" font-weight="bold">10</text>
-<text x="185" y="400" fill="#1a1a24" font-size="11">Sides: 6, 7, 10</text>
-<text x="185" y="420" fill="#1a1a24" font-size="11">6² + 7² = 36 + 49 = 85</text>
-<text x="185" y="440" fill="#1a1a24" font-size="11">10² = 100</text>
-<text x="185" y="460" fill="#cc2222" font-size="13" font-weight="bold">85 ≠ 100 ✗ NO — Not a Right Triangle</text>
+<svg width="220" height="140" viewBox="0 0 220 140">
+<polygon points="30,115 160,115 160,35" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<text x="95" y="132" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle" font-family="Arvo">3</text>
+<text x="170" y="80" fill="#1E2D4F" font-size="14" font-weight="bold" font-family="Arvo">4</text>
+<text x="72" y="65" fill="#cc2222" font-size="14" font-weight="bold" font-family="Arvo">5</text>
 </svg>
 </div>
+<div class="problem-text">A triangle has sides <strong>3, 4,</strong> and <strong>5</strong>. Is this a right triangle? (Type "yes" or "no")</div>
+<div class="answer-line"><input class="answer-input" id="p54_1" type="text" placeholder="yes/no" style="width:80px">
+<br><button class="check-answer-btn" onclick="checkQ('p54','1','yes')">Check ✓</button>
+<div class="p-feedback" id="fbp54_1"></div>
 </div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 2</div>
+<div class="diagram-box">
+<svg width="220" height="140" viewBox="0 0 220 140">
+<polygon points="30,115 160,115 160,35" fill="rgba(204,34,34,0.06)" stroke="#cc2222" stroke-width="2.5"/>
+<text x="95" y="132" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle" font-family="Arvo">4</text>
+<text x="170" y="80" fill="#1E2D4F" font-size="14" font-weight="bold" font-family="Arvo">3</text>
+<text x="72" y="65" fill="#cc2222" font-size="14" font-weight="bold" font-family="Arvo">2</text>
+</svg>
+</div>
+<div class="problem-text">A triangle has sides <strong>4, 3,</strong> and <strong>2</strong>. Is this a right triangle? (Type "yes" or "no")</div>
+<div class="answer-line"><input class="answer-input" id="p54_2" type="text" placeholder="yes/no" style="width:80px">
+<br><button class="check-answer-btn" onclick="checkQ('p54','2','no')">Check ✓</button>
+<div class="p-feedback" id="fbp54_2"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 3</div>
+<div class="diagram-box">
+<svg width="220" height="140" viewBox="0 0 220 140">
+<polygon points="30,115 160,115 160,35" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<text x="95" y="132" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle" font-family="Arvo">5</text>
+<text x="170" y="80" fill="#1E2D4F" font-size="14" font-weight="bold" font-family="Arvo">12</text>
+<text x="72" y="65" fill="#cc2222" font-size="14" font-weight="bold" font-family="Arvo">13</text>
+</svg>
+</div>
+<div class="problem-text">A triangle has sides <strong>5, 12,</strong> and <strong>13</strong>. Is this a right triangle? (Type "yes" or "no")</div>
+<div class="answer-line"><input class="answer-input" id="p54_3" type="text" placeholder="yes/no" style="width:80px">
+<br><button class="check-answer-btn" onclick="checkQ('p54','3','yes')">Check ✓</button>
+<div class="p-feedback" id="fbp54_3"></div>
+</div>
+</div>
+<div class="problem-card">
+<div class="problem-num">Question 4</div>
+<div class="diagram-box">
+<svg width="220" height="140" viewBox="0 0 220 140">
+<polygon points="30,115 160,115 160,35" fill="rgba(204,34,34,0.06)" stroke="#cc2222" stroke-width="2.5"/>
+<text x="95" y="132" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle" font-family="Arvo">6</text>
+<text x="170" y="80" fill="#1E2D4F" font-size="14" font-weight="bold" font-family="Arvo">7</text>
+<text x="72" y="65" fill="#cc2222" font-size="14" font-weight="bold" font-family="Arvo">10</text>
+</svg>
+</div>
+<div class="problem-text">A triangle has sides <strong>6, 7,</strong> and <strong>10</strong>. Is this a right triangle? (Type "yes" or "no")</div>
+<div class="answer-line"><input class="answer-input" id="p54_4" type="text" placeholder="yes/no" style="width:80px">
+<br><button class="check-answer-btn" onclick="checkQ('p54','4','no')">Check ✓</button>
+<div class="p-feedback" id="fbp54_4"></div>
+</div>
+</div>
+</div>
+
 </div>
 
 <!-- ═══ 5.5 WORD PROBLEMS ═══ -->
 <div id="t-55" class="tab-pane">
-<div class="lesson-section" style="border-color:#1E2D4F">
-<h2 style="color:#1E2D4F">5.5 Word Problems</h2>
+
+<h2 style="color:#1E2D4F;font-family:Arvo,serif;">5.5 Word Problems</h2>
 <div class="key-concept"><strong>🔑 STRATEGY:</strong> (1) Read carefully · (2) Draw/label a diagram · (3) Identify legs vs hypotenuse · (4) Set up a² + b² = c² · (5) Solve step by step</div>
 
-<h3 style="color:#22AC00">Problem 1 — Ladder Against a Wall</h3>
-<div class="example-box"><h4>A ladder 15 feet long leans against a wall. The base is 9 feet from the wall. How high does it reach?</h4>
+<h3 style="color:#FFC107;margin-top:18px;">Practice — Real-World Pythagorean Theorem</h3>
+<div class="progress-wrap">
+<span class="progress-label">Progress:</span>
+<div class="progress-bar-outer"><div class="progress-bar-inner" id="prog55" style="width:0%"></div></div>
+<span class="score-display" id="score55">0 / 4</span>
+<button class="check-all-btn" onclick="checkAllSec('55')">Check All</button>
+<button class="reset-btn" onclick="resetSec('55')">Reset</button>
+</div>
+<div class="problems-grid">
+<!-- Q1: Ladder -->
+<div class="problem-card full">
+<div class="problem-num">Question 1 — Ladder Against a Wall</div>
+<div class="word-problem-inner">
 <div class="diagram-box">
-<svg width="240" height="220" viewBox="0 0 240 220">
-<rect x="155" y="25" width="18" height="170" fill="rgba(75,120,123,0.2)" stroke="#75787B" stroke-width="2"/>
-<text x="180" y="115" fill="#75787B" font-size="10">WALL</text>
-<line x1="25" y1="195" x2="220" y2="195" stroke="#75787B" stroke-width="3"/>
-<line x1="55" y1="195" x2="155" y2="45" stroke="#FFC107" stroke-width="5"/>
-<text x="78" y="112" fill="#FFC107" font-size="14" font-weight="bold">15 ft</text>
-<line x1="55" y1="195" x2="155" y2="195" stroke="#1E2D4F" stroke-width="3"/>
-<text x="105" y="213" fill="#1E2D4F" font-size="13" font-weight="bold" text-anchor="middle">9 ft</text>
-<line x1="155" y1="45" x2="155" y2="195" stroke="#22AC00" stroke-width="3"/>
-<text x="200" y="130" fill="#22AC00" font-size="13" font-weight="bold">h = ?</text>
-<rect x="142" y="180" width="13" height="13" stroke="#FFC107" stroke-width="2" fill="none"/>
+<svg width="230" height="240" viewBox="0 0 230 240">
+<text x="115" y="18" fill="#FFC107" font-family="Arvo" font-size="13" text-anchor="middle" font-weight="bold">Ladder Problem</text>
+<rect x="155" y="30" width="18" height="175" fill="rgba(30,45,79,0.15)" stroke="#75787B" stroke-width="2"/>
+<text x="185" y="125" fill="#75787B" font-size="11">WALL</text>
+<line x1="25" y1="205" x2="220" y2="205" stroke="#75787B" stroke-width="4"/>
+<line x1="55" y1="205" x2="155" y2="55" stroke="#FFC107" stroke-width="5"/>
+<text x="78" y="120" fill="#FFC107" font-size="15" font-weight="bold" font-family="Arvo">15 ft</text>
+<line x1="55" y1="205" x2="155" y2="205" stroke="#1E2D4F" stroke-width="4"/>
+<text x="105" y="225" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle" font-family="Arvo">9 ft</text>
+<line x1="155" y1="55" x2="155" y2="205" stroke="#22AC00" stroke-width="4"/>
+<text x="210" y="140" fill="#22AC00" font-size="14" font-weight="bold" font-family="Arvo">h = ?</text>
+<rect x="140" y="190" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
 </svg>
 </div>
-<div class="example-step"><strong>Setup:</strong> 9² + h² = 15²</div>
-<div class="example-step">81 + h² = 225</div>
-<div class="example-step">h² = 225 − 81 = 144</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>h = √144 = 12 ft ✓</strong></div>
+<div>
+<div class="problem-text">A ladder <strong>15 feet</strong> long leans against a wall. The base is <strong>9 feet</strong> from the wall. How high up the wall does the ladder reach?</div>
+<div class="answer-line">Answer: h = <input class="answer-input" id="p55_1" type="text" placeholder="?"> ft
+<br><button class="check-answer-btn" onclick="checkQ('p55','1','12')">Check ✓</button>
+<div class="p-feedback" id="fbp55_1"></div>
 </div>
-
-<h3 style="color:#22AC00">Problem 2 — Wheelchair Ramp</h3>
-<div class="example-box"><h4>A ramp is 10 ft long and rises 6 ft vertically. What is the horizontal length?</h4>
+</div>
+</div>
+</div>
+<!-- Q2: Ramp -->
+<div class="problem-card full">
+<div class="problem-num">Question 2 — Wheelchair Ramp</div>
+<div class="word-problem-inner">
 <div class="diagram-box">
-<svg width="240" height="160" viewBox="0 0 240 160">
-<polygon points="20,140 200,140 200,60" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
-<rect x="186" y="126" width="13" height="13" stroke="#FFC107" stroke-width="2" fill="none"/>
-<text x="110" y="155" fill="#22AC00" font-size="13" font-weight="bold" text-anchor="middle">horizontal = ?</text>
-<text x="208" y="105" fill="#1E2D4F" font-size="13" font-weight="bold">6 ft</text>
-<text x="80" y="88" fill="#cc2222" font-size="13" font-weight="bold">ramp = 10 ft</text>
+<svg width="240" height="180" viewBox="0 0 240 180">
+<text x="120" y="18" fill="#FFC107" font-family="Arvo" font-size="13" text-anchor="middle" font-weight="bold">Wheelchair Ramp</text>
+<line x1="20" y1="155" x2="220" y2="155" stroke="#75787B" stroke-width="3"/>
+<polygon points="20,155 200,155 200,75" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<rect x="185" y="140" width="15" height="15" stroke="#FFC107" stroke-width="2" fill="none"/>
+<text x="110" y="175" fill="#1E2D4F" font-size="14" font-weight="bold" text-anchor="middle" font-family="Arvo">horizontal = ?</text>
+<text x="210" y="118" fill="#22AC00" font-size="14" font-weight="bold" font-family="Arvo">6 ft</text>
+<text x="68" y="100" fill="#cc2222" font-size="14" font-weight="bold" font-family="Arvo">ramp = 10 ft</text>
 </svg>
 </div>
-<div class="example-step"><strong>Setup:</strong> a² + 6² = 10²</div>
-<div class="example-step">a² + 36 = 100</div>
-<div class="example-step">a² = 100 − 36 = 64</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>a = √64 = 8 ft ✓</strong></div>
+<div>
+<div class="problem-text">A ramp is <strong>10 feet</strong> long and rises <strong>6 feet</strong> vertically. What is the horizontal length?</div>
+<div class="answer-line">Answer: horizontal = <input class="answer-input" id="p55_2" type="text" placeholder="?"> ft
+<br><button class="check-answer-btn" onclick="checkQ('p55','2','8')">Check ✓</button>
+<div class="p-feedback" id="fbp55_2"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q3: Baseball Diamond -->
+<div class="problem-card full">
+<div class="problem-num">Question 3 — Baseball Diamond</div>
+<div class="word-problem-inner">
+<div class="diagram-box">
+<svg width="220" height="220" viewBox="0 0 220 220">
+<text x="110" y="18" fill="#FFC107" font-family="Arvo" font-size="13" text-anchor="middle" font-weight="bold">Baseball Diamond</text>
+<polygon points="110,30 200,115 110,200 20,115" fill="rgba(34,172,0,0.08)" stroke="#22AC00" stroke-width="2.5"/>
+<line x1="20" y1="115" x2="200" y2="115" stroke="#cc2222" stroke-width="3" stroke-dasharray="8,4"/>
+<circle cx="110" cy="30" r="5" fill="#FFC107"/><text x="110" y="22" fill="#FFC107" font-size="10" text-anchor="middle">2nd</text>
+<circle cx="200" cy="115" r="5" fill="#FFC107"/><text x="210" y="118" fill="#FFC107" font-size="10">1st</text>
+<circle cx="110" cy="200" r="5" fill="#FFC107"/><text x="110" y="215" fill="#FFC107" font-size="10" text-anchor="middle">Home</text>
+<circle cx="20" cy="115" r="5" fill="#FFC107"/><text x="5" y="118" fill="#FFC107" font-size="10">3rd</text>
+<text x="160" y="78" fill="#22AC00" font-size="12" font-weight="bold" font-family="Arvo">90 ft</text>
+<text x="90" y="110" fill="#cc2222" font-size="13" font-weight="bold" font-family="Arvo">d = ?</text>
+</svg>
+</div>
+<div>
+<div class="problem-text">A baseball diamond is a square with sides of <strong>90 feet</strong>. What is the distance from home plate to second base (the diagonal)? Round to nearest whole number.</div>
+<div class="answer-line">Answer: d ≈ <input class="answer-input" id="p55_3" type="text" placeholder="?"> ft
+<br><button class="check-answer-btn" onclick="checkQ('p55','3','127')">Check ✓</button>
+<div class="p-feedback" id="fbp55_3"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q4: TV Screen -->
+<div class="problem-card full">
+<div class="problem-num">Question 4 — TV Screen Diagonal</div>
+<div class="word-problem-inner">
+<div class="diagram-box">
+<svg width="220" height="180" viewBox="0 0 220 180">
+<text x="110" y="18" fill="#FFC107" font-family="Arvo" font-size="13" text-anchor="middle" font-weight="bold">TV Screen Diagonal</text>
+<rect x="20" y="35" width="180" height="120" rx="4" fill="rgba(30,45,79,0.08)" stroke="#1E2D4F" stroke-width="2.5"/>
+<line x1="20" y1="35" x2="200" y2="155" stroke="#cc2222" stroke-width="3" stroke-dasharray="6,3"/>
+<text x="110" y="170" fill="#1E2D4F" font-size="13" font-weight="bold" text-anchor="middle" font-family="Arvo">36 in</text>
+<text x="5" y="100" fill="#22AC00" font-size="11" font-weight="bold" font-family="Arvo">27 in</text>
+<text x="100" y="105" fill="#cc2222" font-size="13" font-weight="bold" font-family="Arvo">d = ?</text>
+<rect x="20" y="35" width="14" height="14" stroke="#FFC107" stroke-width="2" fill="none"/>
+</svg>
+</div>
+<div>
+<div class="problem-text">A TV screen is <strong>36 inches</strong> wide and <strong>27 inches</strong> tall. What is the diagonal?</div>
+<div class="answer-line">Answer: d = <input class="answer-input" id="p55_4" type="text" placeholder="?"> in
+<br><button class="check-answer-btn" onclick="checkQ('p55','4','45')">Check ✓</button>
+<div class="p-feedback" id="fbp55_4"></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-<h3 style="color:#22AC00">Problem 3 — Baseball Diamond</h3>
-<div class="example-box"><h4>A baseball diamond has 90 ft sides. What is the distance from home plate to second base (diagonal)?</h4>
-<div class="example-step"><strong>Setup:</strong> 90² + 90² = d²</div>
-<div class="example-step">8100 + 8100 = 16200</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √16200 ≈ 127 ft ✓</strong></div>
-</div>
-
-<h3 style="color:#22AC00">Problem 4 — TV Screen</h3>
-<div class="example-box"><h4>A TV is 36 inches wide and 27 inches tall. Find the diagonal.</h4>
-<div class="example-step"><strong>Setup:</strong> 36² + 27² = d²</div>
-<div class="example-step">1296 + 729 = 2025</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √2025 = 45 in ✓</strong></div>
-</div>
-
-<h3 style="color:#22AC00">Problem 5 — Hiking Trail</h3>
-<div class="example-box"><h4>A hiker walks 16 km east then 12 km north. Straight-line distance from start?</h4>
-<div class="example-step"><strong>Setup:</strong> 16² + 12² = d²</div>
-<div class="example-step">256 + 144 = 400</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √400 = 20 km ✓</strong></div>
-</div>
-
-<h3 style="color:#22AC00">Problem 6 — Flagpole Wire</h3>
-<div class="example-box"><h4>A flagpole is 24 ft tall. A 26 ft wire runs from the top to a stake. How far is the stake from the base?</h4>
-<div class="example-step"><strong>Setup:</strong> a² + 24² = 26²</div>
-<div class="example-step">a² + 576 = 676</div>
-<div class="example-step">a² = 676 − 576 = 100</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>a = √100 = 10 ft ✓</strong></div>
-</div>
-
-<h3 style="color:#22AC00">Problem 7 — Boat Trip</h3>
-<div class="example-box"><h4>A boat travels 30 km east then 40 km north. Straight-line distance to the island?</h4>
-<div class="example-step"><strong>Setup:</strong> 30² + 40² = d²</div>
-<div class="example-step">900 + 1600 = 2500</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √2500 = 50 km ✓</strong></div>
-</div>
-
-<h3 style="color:#22AC00">Problem 8 — Garden Diagonal</h3>
-<div class="example-box"><h4>A rectangular garden is 40 m wide and 30 m tall. How long is the diagonal path?</h4>
-<div class="example-step"><strong>Setup:</strong> 40² + 30² = d²</div>
-<div class="example-step">1600 + 900 = 2500</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √2500 = 50 m ✓</strong></div>
-</div>
-</div>
 </div>
 
 <!-- ═══ 5.6 DISTANCE ON THE COORDINATE PLANE ═══ -->
 <div id="t-56" class="tab-pane">
-<div class="lesson-section" style="border-color:#0056B3">
-<h2 style="color:#0056B3">5.6 Distance on the Coordinate Plane</h2>
-<div class="key-concept"><strong>📐 HOW IT WORKS:</strong> Connect the two points to form a <strong>right triangle</strong>. The horizontal distance is <strong>Δx = |x₂ − x₁|</strong> and the vertical distance is <strong>Δy = |y₂ − y₁|</strong>. Then use <span style="color:#FFC107;font-size:1.1em">a² + b² = c²</span> where a = Δx, b = Δy, and c = distance.</div>
-<div class="warning-box"><strong>⚠️ NO DISTANCE FORMULA NEEDED!</strong> You already know how to do this — just use the Pythagorean Theorem! Draw the right triangle, find Δx and Δy, then solve.</div>
 
-<h3 style="color:#1E2D4F">Worked Examples</h3>
+<h2 style="color:#1E2D4F;font-family:Arvo,serif;">5.6 Distance on the Coordinate Plane</h2>
+<div class="key-concept"><strong>📐 HOW IT WORKS:</strong> Connect the two points to form a right triangle. The horizontal distance is <strong>Δx = |x₂ − x₁|</strong> and the vertical distance is <strong>Δy = |y₂ − y₁|</strong>. Then use <strong>a² + b² = c²</strong> where a = Δx, b = Δy, and c = distance.</div>
+<div class="warning-box"><strong>⚠️ NO DISTANCE FORMULA NEEDED!</strong> Just count or subtract to find Δx and Δy, then use the Pythagorean Theorem. That's it!</div>
 
-<div class="example-box"><h4>Problem 1: Distance from (0, −2) to (6, 2)</h4>
+<div class="example-box"><h4>Example: Find the distance between (1, 2) and (4, 6)</h4>
+<div class="example-step"><strong>Step 1:</strong> Find Δx: |4 − 1| = 3</div>
+<div class="example-step"><strong>Step 2:</strong> Find Δy: |6 − 2| = 4</div>
+<div class="example-step"><strong>Step 3:</strong> Use a² + b² = c²: 3² + 4² = c²</div>
+<div class="example-step"><strong>Step 4:</strong> 9 + 16 = 25 = c²</div>
+<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>c = √25 = 5 ✓</strong></div>
+</div>
+
+<h3 style="color:#FFC107;margin-top:18px;">Practice — Find the Distance</h3>
+<div class="progress-wrap">
+<span class="progress-label">Progress:</span>
+<div class="progress-bar-outer"><div class="progress-bar-inner" id="prog56" style="width:0%"></div></div>
+<span class="score-display" id="score56">0 / 4</span>
+<button class="check-all-btn" onclick="checkAllSec('56')">Check All</button>
+<button class="reset-btn" onclick="resetSec('56')">Reset</button>
+</div>
+<div class="problems-grid">
+<!-- Q1: (0,-2) to (6,2) -->
+<div class="problem-card">
+<div class="problem-num">Question 1</div>
 <div class="diagram-box">
 <svg width="220" height="200" viewBox="0 0 220 200">
-<rect x="20" y="10" width="180" height="180" fill="#f8f9fa" stroke="#cdd5e0" stroke-width="1" rx="4"/>
+<defs><pattern id="cg1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0L0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1"/></pattern></defs>
+<rect x="20" y="10" width="180" height="180" fill="url(#cg1)"/>
 <line x1="20" y1="110" x2="200" y2="110" stroke="#75787B" stroke-width="1.5"/>
 <line x1="110" y1="10" x2="110" y2="190" stroke="#75787B" stroke-width="1.5"/>
 <line x1="50" y1="150" x2="170" y2="150" stroke="#1E2D4F" stroke-width="2.5"/>
 <line x1="170" y1="150" x2="170" y2="70" stroke="#22AC00" stroke-width="2.5"/>
 <line x1="50" y1="150" x2="170" y2="70" stroke="#cc2222" stroke-width="2.5" stroke-dasharray="5,3"/>
 <circle cx="50" cy="150" r="5" fill="#FFC107"/>
-<text x="25" y="168" fill="#FFC107" font-size="10">(0,−2)</text>
+<text x="22" y="168" fill="#FFC107" font-size="10" font-family="Arvo">(0,−2)</text>
 <circle cx="170" cy="70" r="5" fill="#cc2222"/>
-<text x="172" y="65" fill="#cc2222" font-size="10">(6,2)</text>
+<text x="173" y="65" fill="#cc2222" font-size="10" font-family="Arvo">(6,2)</text>
 <text x="110" y="168" fill="#1E2D4F" font-size="11" font-weight="bold" text-anchor="middle">Δx=6</text>
 <text x="185" y="115" fill="#22AC00" font-size="11" font-weight="bold">Δy=4</text>
+<rect x="155" y="135" width="14" height="14" stroke="#FFC107" stroke-width="2" fill="none"/>
 </svg>
 </div>
-<div class="example-step"><strong>Δx:</strong> |6 − 0| = 6 &nbsp;&nbsp; <strong>Δy:</strong> |2 − (−2)| = 4</div>
-<div class="example-step"><strong>Setup:</strong> 6² + 4² = d²  →  36 + 16 = 52</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √52 = 2√13 ≈ 7.21 ✓</strong></div>
+<div class="problem-text">Find the distance between <strong>(0, −2)</strong> and <strong>(6, 2)</strong>.</div>
+<div class="answer-line">d = <input class="answer-input" id="p56_1" type="text" placeholder="?">
+<br><button class="check-answer-btn" onclick="checkQ('p56','1','√52')">Check ✓</button>
+<div class="p-feedback" id="fbp56_1"></div>
+</div>
+</div>
+<!-- Q2: (0,-2) to (2,2) -->
+<div class="problem-card">
+<div class="problem-num">Question 2</div>
+<div class="diagram-box">
+<svg width="220" height="200" viewBox="0 0 220 200">
+<defs><pattern id="cg2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0L0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1"/></pattern></defs>
+<rect x="20" y="10" width="180" height="180" fill="url(#cg2)"/>
+<line x1="20" y1="110" x2="200" y2="110" stroke="#75787B" stroke-width="1.5"/>
+<line x1="110" y1="10" x2="110" y2="190" stroke="#75787B" stroke-width="1.5"/>
+<line x1="110" y1="150" x2="130" y2="150" stroke="#1E2D4F" stroke-width="2.5"/>
+<line x1="130" y1="150" x2="130" y2="70" stroke="#22AC00" stroke-width="2.5"/>
+<line x1="110" y1="150" x2="130" y2="70" stroke="#cc2222" stroke-width="2.5" stroke-dasharray="5,3"/>
+<circle cx="110" cy="150" r="5" fill="#FFC107"/>
+<text x="82" y="168" fill="#FFC107" font-size="10" font-family="Arvo">(0,−2)</text>
+<circle cx="130" cy="70" r="5" fill="#cc2222"/>
+<text x="135" y="65" fill="#cc2222" font-size="10" font-family="Arvo">(2,2)</text>
+<text x="120" y="168" fill="#1E2D4F" font-size="10" font-weight="bold">Δx=2</text>
+<text x="138" y="115" fill="#22AC00" font-size="10" font-weight="bold">Δy=4</text>
+<rect x="116" y="136" width="13" height="13" stroke="#FFC107" stroke-width="2" fill="none"/>
+</svg>
+</div>
+<div class="problem-text">Find the distance between <strong>(0, −2)</strong> and <strong>(2, 2)</strong>.</div>
+<div class="answer-line">d = <input class="answer-input" id="p56_2" type="text" placeholder="?">
+<br><button class="check-answer-btn" onclick="checkQ('p56','2','√20')">Check ✓</button>
+<div class="p-feedback" id="fbp56_2"></div>
+</div>
+</div>
+<!-- Q3: (-3,1) to (5,7) -->
+<div class="problem-card">
+<div class="problem-num">Question 3</div>
+<div class="diagram-box">
+<svg width="220" height="200" viewBox="0 0 220 200">
+<defs><pattern id="cg3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0L0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1"/></pattern></defs>
+<rect x="20" y="10" width="180" height="180" fill="url(#cg3)"/>
+<line x1="20" y1="110" x2="200" y2="110" stroke="#75787B" stroke-width="1.5"/>
+<line x1="110" y1="10" x2="110" y2="190" stroke="#75787B" stroke-width="1.5"/>
+<line x1="40" y1="95" x2="190" y2="95" stroke="#1E2D4F" stroke-width="2.5"/>
+<line x1="190" y1="95" x2="190" y2="40" stroke="#22AC00" stroke-width="2.5"/>
+<line x1="40" y1="95" x2="190" y2="40" stroke="#cc2222" stroke-width="2.5" stroke-dasharray="5,3"/>
+<circle cx="40" cy="95" r="5" fill="#FFC107"/>
+<text x="12" y="110" fill="#FFC107" font-size="10" font-family="Arvo">(−3,1)</text>
+<circle cx="190" cy="40" r="5" fill="#cc2222"/>
+<text x="168" y="33" fill="#cc2222" font-size="10" font-family="Arvo">(5,7)</text>
+<text x="115" y="112" fill="#1E2D4F" font-size="11" font-weight="bold" text-anchor="middle">Δx=8</text>
+<text x="197" y="72" fill="#22AC00" font-size="11" font-weight="bold">Δy=6</text>
+<rect x="176" y="81" width="13" height="13" stroke="#FFC107" stroke-width="2" fill="none"/>
+</svg>
+</div>
+<div class="problem-text">Find the distance between <strong>(−3, 1)</strong> and <strong>(5, 7)</strong>.</div>
+<div class="answer-line">d = <input class="answer-input" id="p56_3" type="text" placeholder="?">
+<br><button class="check-answer-btn" onclick="checkQ('p56','3','10')">Check ✓</button>
+<div class="p-feedback" id="fbp56_3"></div>
+</div>
+</div>
+<!-- Q4: (0,0) to (3,4) -->
+<div class="problem-card">
+<div class="problem-num">Question 4</div>
+<div class="diagram-box">
+<svg width="220" height="200" viewBox="0 0 220 200">
+<defs><pattern id="cg4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0L0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1"/></pattern></defs>
+<rect x="20" y="10" width="180" height="180" fill="url(#cg4)"/>
+<line x1="20" y1="110" x2="200" y2="110" stroke="#75787B" stroke-width="1.5"/>
+<line x1="110" y1="10" x2="110" y2="190" stroke="#75787B" stroke-width="1.5"/>
+<line x1="110" y1="110" x2="170" y2="110" stroke="#1E2D4F" stroke-width="2.5"/>
+<line x1="170" y1="110" x2="170" y2="30" stroke="#22AC00" stroke-width="2.5"/>
+<line x1="110" y1="110" x2="170" y2="30" stroke="#cc2222" stroke-width="2.5" stroke-dasharray="5,3"/>
+<circle cx="110" cy="110" r="5" fill="#FFC107"/>
+<text x="82" y="125" fill="#FFC107" font-size="10" font-family="Arvo">(0, 0)</text>
+<circle cx="170" cy="30" r="5" fill="#cc2222"/>
+<text x="175" y="27" fill="#cc2222" font-size="10" font-family="Arvo">(3, 4)</text>
+<text x="140" y="125" fill="#1E2D4F" font-size="11" font-weight="bold" text-anchor="middle">Δx=3</text>
+<text x="178" y="75" fill="#22AC00" font-size="11" font-weight="bold">Δy=4</text>
+<rect x="156" y="96" width="13" height="13" stroke="#FFC107" stroke-width="2" fill="none"/>
+</svg>
+</div>
+<div class="problem-text">Find the distance between <strong>(0, 0)</strong> and <strong>(3, 4)</strong>.</div>
+<div class="answer-line">d = <input class="answer-input" id="p56_4" type="text" placeholder="?">
+<br><button class="check-answer-btn" onclick="checkQ('p56','4','5')">Check ✓</button>
+<div class="p-feedback" id="fbp56_4"></div>
+</div>
+</div>
 </div>
 
-<div class="example-box"><h4>Problem 2: Distance from (0, −2) to (2, 2)</h4>
-<div class="example-step"><strong>Δx:</strong> |2 − 0| = 2 &nbsp;&nbsp; <strong>Δy:</strong> |2 − (−2)| = 4</div>
-<div class="example-step"><strong>Setup:</strong> 2² + 4² = d²  →  4 + 16 = 20</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √20 = 2√5 ≈ 4.47 ✓</strong></div>
-</div>
-
-<div class="example-box"><h4>Problem 3: Distance from (−3, 1) to (5, 7)</h4>
-<div class="example-step"><strong>Δx:</strong> |5 − (−3)| = 8 &nbsp;&nbsp; <strong>Δy:</strong> |7 − 1| = 6</div>
-<div class="example-step"><strong>Setup:</strong> 8² + 6² = d²  →  64 + 36 = 100</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √100 = 10 ✓</strong></div>
-</div>
-
-<div class="example-box"><h4>Problem 4: Distance from (0, 0) to (3, 4)</h4>
-<div class="example-step"><strong>Δx:</strong> |3 − 0| = 3 &nbsp;&nbsp; <strong>Δy:</strong> |4 − 0| = 4</div>
-<div class="example-step"><strong>Setup:</strong> 3² + 4² = d²  →  9 + 16 = 25</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √25 = 5 ✓ (Classic 3-4-5 triple!)</strong></div>
-</div>
-
-<div class="example-box"><h4>Problem 5: Distance from (−1, −1) to (5, 7)</h4>
-<div class="example-step"><strong>Δx:</strong> |5 − (−1)| = 6 &nbsp;&nbsp; <strong>Δy:</strong> |7 − (−1)| = 8</div>
-<div class="example-step"><strong>Setup:</strong> 6² + 8² = d²  →  36 + 64 = 100</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √100 = 10 ✓</strong></div>
-</div>
-
-<div class="example-box"><h4>Problem 6: Distance from (−4, 3) to (8, −2)</h4>
-<div class="example-step"><strong>Δx:</strong> |8 − (−4)| = 12 &nbsp;&nbsp; <strong>Δy:</strong> |−2 − 3| = 5</div>
-<div class="example-step"><strong>Setup:</strong> 12² + 5² = d²  →  144 + 25 = 169</div>
-<div class="example-step" style="background:rgba(34,172,0,0.2)"><strong>d = √169 = 13 ✓ (5-12-13 triple!)</strong></div>
-</div>
-
-<div class="warning-box"><strong>⚠️ WATCH YOUR SIGNS:</strong> When subtracting negative coordinates, remember: subtracting a negative means ADDING!<br>Example: 5 − (−3) = 5 + 3 = 8, NOT 5 − 3 = 2</div>
-</div>
 </div>
 
 <div id="t-5rev" class="tab-pane">
@@ -714,6 +909,80 @@ function chkAns(btn,correct){
     fb.textContent='✗ The answer is '+correct;
   }
 }
+
+
+// ── INTERACTIVE PROBLEM SYSTEM ──
+var ANSWERS_MAP = {
+  'p52': {total:4, answers:{'1':'5','2':'10','3':'13','4':'17'}},
+  'p53': {total:4, answers:{'1':'3','2':'12','3':'15','4':'7'}},
+  'p54': {total:4, answers:{'1':'yes','2':'no','3':'yes','4':'no'}},
+  'p55': {total:4, answers:{'1':'12','2':'8','3':'127','4':'45'}},
+  'p56': {total:4, answers:{'1':'√52','2':'√20','3':'10','4':'5'}}
+};
+
+function checkQ(sec, num, correct) {
+  var input = document.getElementById(sec + '_' + num);
+  var fb = document.getElementById('fb' + sec + '_' + num);
+  if (!input || !fb) return;
+  var val = input.value.trim().toLowerCase().replace(/\s+/g,'');
+  var ans = correct.toString().toLowerCase().replace(/\s+/g,'');
+  var ok = (val === ans);
+  // Accept alternate forms for square roots
+  if (ans === '√52' && (val === 'sqrt(52)' || val === '2√13' || val === '2sqrt(13)' || val === '7.21' || val === '≈7.21')) ok = true;
+  if (ans === '√20' && (val === 'sqrt(20)' || val === '2√5' || val === '2sqrt(5)' || val === '4.47' || val === '≈4.47')) ok = true;
+  if (ans === '127' && (val === '127' || val === '127.3' || val === '≈127')) ok = true;
+  input.classList.remove('correct','incorrect');
+  fb.classList.remove('show','correct','incorrect');
+  if (ok) {
+    input.classList.add('correct');
+    fb.className = 'p-feedback show correct';
+    fb.textContent = '✓ Correct! Well done!';
+  } else {
+    input.classList.add('incorrect');
+    fb.className = 'p-feedback show incorrect';
+    fb.textContent = '✗ Not quite. The answer is: ' + correct;
+  }
+  updateProg(sec);
+}
+
+function checkAllSec(sec) {
+  var info = ANSWERS_MAP[sec];
+  if (!info) return;
+  for (var i = 1; i <= info.total; i++) {
+    var input = document.getElementById(sec + '_' + i);
+    if (input && input.value.trim()) {
+      checkQ(sec, String(i), info.answers[String(i)]);
+    }
+  }
+}
+
+function resetSec(sec) {
+  var info = ANSWERS_MAP[sec];
+  if (!info) return;
+  for (var i = 1; i <= info.total; i++) {
+    var input = document.getElementById(sec + '_' + i);
+    var fb = document.getElementById('fb' + sec + '_' + i);
+    if (input) { input.value = ''; input.classList.remove('correct','incorrect'); }
+    if (fb) { fb.className = 'p-feedback'; }
+  }
+  updateProg(sec);
+}
+
+function updateProg(sec) {
+  var info = ANSWERS_MAP[sec];
+  if (!info) return;
+  var correct = 0;
+  for (var i = 1; i <= info.total; i++) {
+    var input = document.getElementById(sec + '_' + i);
+    if (input && input.classList.contains('correct')) correct++;
+  }
+  var pct = Math.round((correct / info.total) * 100);
+  var progEl = document.getElementById('prog' + sec);
+  var scoreEl = document.getElementById('score' + sec);
+  if (progEl) progEl.style.width = pct + '%';
+  if (scoreEl) scoreEl.textContent = correct + ' / ' + info.total;
+}
+
 </script>
 
 <!-- ═══ KINGFISHER AI TUTOR ═══ -->
