@@ -6,28 +6,23 @@
 <title>Unit 2: Exponents & Scientific Notation — IC Imagine 8th Grade Math</title>
 <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-
 :root{--school-blue:#1E2D4F;--school-orange:#FFC107;--school-burgundy:#1E2D4F;--school-light-burgundy:#1E2D4F;--school-green:#22AC00;--light-grey:#97999B;--dark-grey:#75787B;--bg-dark:#e8edf5;--bg-darker:#f8f9fc;--text-light:#1a1a24;--text-muted:#4a4a5a}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:100vh;font-size:18px}
-
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 @keyframes pulseGlow{0%,100%{opacity:1}50%{opacity:0.7}}
 @keyframes pulse-circle{0%,100%{box-shadow:0 0 5px #FFC107}50%{box-shadow:0 0 20px #FFC107}}
 @keyframes draw-arrow{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
-
 .nav-container{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .nav-title{font-family:'Arvo',serif;font-size:0.9em;margin-right:auto;font-weight:700;color:#1E2D4F}
 .nav-title span{color:#1E2D4F}
-
 .game-section{display:none;min-height:calc(100vh - 50px);padding:20px 15px}
 .game-section.active{display:block}
 .unit-container{max-width:100%;margin:0 auto}
 .unit-header{background:linear-gradient(180deg,#e8edf5,#f8f9fc);border:3px solid #75787B;border-radius:10px;padding:15px;margin-bottom:15px;text-align:center}
 .unit-title{font-family:'Arvo',serif;font-size:1em;margin-bottom:8px;}
 .unit-subtitle{color:#4a4a5a;font-size:0.9em}
-
 .lesson-section{background:linear-gradient(180deg,#f8f9fc,#edf1f8);border:2px solid #75787B;border-radius:8px;padding:15px;margin-bottom:15px}
 .lesson-section h2{font-size:1.1em;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid}
 .lesson-section h3{font-size:1em;margin:12px 0 8px;color:#4a4a5a}
@@ -42,7 +37,6 @@ body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:
 .example-box h4{color:#1E2D4F;margin-bottom:8px;font-size:1em}
 .example-step{background:rgba(30,45,79,0.1);padding:8px 12px;margin:4px 0;border-radius:3px;font-family:'Courier New',monospace;color:#1E2D4F;font-size:1em}
 .diagram-box{background:#ffffff;border:2px solid #4a4a5a;border-radius:6px;padding:12px;margin:10px 0;text-align:center;overflow-x:auto}
-
 /* Master Table Styles */
 .master-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:0.95em}
 .master-table th{background:linear-gradient(180deg,#dde4f0,#c5d0e8);color:#1E2D4F;padding:12px 8px;border:2px solid #75787B;text-align:center}
@@ -51,7 +45,6 @@ body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:
 .master-table .rule-name{color:#1E2D4F;font-weight:bold;text-align:left;padding-left:12px}
 .master-table .formula{color:#1E2D4F;font-family:'Courier New',monospace}
 .master-table .example{color:#1a7000}
-
 .check-question{background:linear-gradient(180deg,#f8f9fc,#edf1f8);border:2px solid #1E2D4F;border-radius:8px;padding:15px;margin:15px 0}
 .check-question h4{color:#1E2D4F;font-size:0.9em;margin-bottom:10px}
 .check-question .cq-text{font-size:1.05em;margin-bottom:10px;color:#1a1a24}
@@ -65,7 +58,6 @@ body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:
 .check-feedback.show{display:block}
 .check-feedback.correct{background:#d4f0d0;border:1px solid #22AC00;color:#1a7000}
 .check-feedback.incorrect{background:#f5d5d5;border:1px solid #ff0000;color:#1E2D4F}
-
 .quiz-section{background:linear-gradient(180deg,#e8edf5,#f8f9fc);border:3px solid #FFC107;border-radius:10px;padding:18px;margin-top:18px}
 .quiz-section h2{font-family:'Arvo',serif;font-size:0.9em;color:#FFC107;text-align:center;margin-bottom:15px}
 .progress-bar{background:#cdd5e5;border:2px solid #75787B;border-radius:6px;height:20px;margin-bottom:12px;overflow:hidden}
@@ -89,11 +81,9 @@ body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:
 .quiz-results h3{font-family:'Arvo',serif;color:#FFC107;font-size:0.95em;margin-bottom:15px}
 .quiz-results .final-score{font-family:'Arvo',serif;font-size:1.4em;color:#1a7000;}
 .quiz-restart{margin-top:15px;padding:12px 30px;font-family:'Arvo',serif;font-size:0.6em;background:linear-gradient(180deg,#1E2D4F,#0d1f3f);border:2px solid #3a5080;border-radius:6px;color:#fff;cursor:pointer}
-
 .arcade-panel{background:linear-gradient(180deg,#e8edf5,#f8f9fc);border:4px solid #75787B;border-radius:12px;padding:18px;box-shadow:0 4px 15px rgba(0,0,0,0.1);max-width:1000px;margin:0 auto}
 .arcade-title{font-family:'Arvo',serif;font-size:1em;text-align:center;margin-bottom:8px;color:#FFC107;}
 .arcade-subtitle{text-align:center;color:#4a4a5a;margin-bottom:15px;font-size:0.9em}
-
 /* Vertical Equation Styles */
 .equation-vertical{background:#ffffff;border:2px solid #1E2D4F;border-radius:8px;padding:15px;margin:12px 0;font-family:'Courier New',monospace}
 .eq-line{display:flex;justify-content:center;gap:20px;margin:6px 0;font-size:1.1em;flex-wrap:wrap}
@@ -103,10 +93,8 @@ body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:
 .eq-line .op-color{color:#1a7000;font-weight:bold}
 .eq-line .final{color:#FFC107;font-weight:bold;font-size:1.3em}
 .eq-underline{border-bottom:2px solid #75787B;padding-bottom:8px;margin-bottom:8px}
-
 /* Distribution Animation */
 .dist-demo{background:#ffffff;border:2px solid #FFC107;border-radius:8px;padding:20px;margin:15px 0;text-align:center}
-
 /* Work Shown Styles for Fractions */
 .work-shown-box{background:#ffffff;border:2px solid #1E2D4F;border-radius:8px;padding:15px;margin:15px 0}
 .work-item{padding:10px 12px;margin:8px 0;border-radius:5px;font-size:0.95em}
@@ -117,9 +105,7 @@ body{font-family:'Inter',sans-serif;background:#f8f9fc;color:#1a1a24;min-height:
 .wrong-work .work-label{color:#1E2D4F}
 .work-explain{display:block;color:#3a3a4a;font-family:'Courier New',monospace;line-height:1.4}
 .dist-circle{display:inline-block;border:3px solid #FFC107;border-radius:50%;padding:5px 12px;background:rgba(255,193,7,0.15);animation:pulse-circle 1.5s ease-in-out infinite;font-size:1.2em;font-weight:bold;color:#FFC107}
-
 .game-section { display: block !important; }
-
 /* === IC IMAGINE NAV === */
 nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1000;border-bottom:3px solid #FFC107}
 .nav-container{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
@@ -144,42 +130,36 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 .practice-cta .cta-desc{color:#fff;margin-bottom:14px;font-size:0.95em}
 .practice-cta a{display:inline-block;padding:12px 32px;background:#FFC107;color:#1E2D4F;font-weight:bold;font-family:'Arvo',serif;border-radius:8px;text-decoration:none;font-size:1em;transition:all 0.2s}
 .practice-cta a:hover{background:#ffca2c;transform:translateY(-2px);box-shadow:0 4px 12px rgba(255,193,7,0.4)}
-
 </style>
 </head>
 <body>
-
 <nav class="top-nav">
 <div class="nav-container">
-  <span class="nav-title">🦅 <span>IC Imagine</span> 8th Grade Math</span>
-  <a class="nb" href="index.html">🏠 Home</a>
-  <a class="nb" href="unit1.html">U1</a>
-  <a class="nb active" href="unit2.html">U2</a>
-  <a class="nb" href="unit3.html">U3</a>
-  <a class="nb" href="unit4.html">U4</a>
-  <a class="nb" href="unit5.html">U5</a>
-  <a class="nb" href="unit6.html">U6</a>
-  <a class="nb" href="unit7.html">U7</a>
-  <a class="nb" href="unit8.html">U8</a>
-  <a class="nb" href="fluency.html">⚡ Fluency</a>
-  <a class="nb" href="volume.html">📦 Vol</a>
+<span class="nav-title">🦅 <span>IC Imagine</span> 8th Grade Math</span>
+<a class="nb" href="index.html">🏠 Home</a>
+<a class="nb" href="unit1.html">U1</a>
+<a class="nb active" href="unit2.html">U2</a>
+<a class="nb" href="unit3.html">U3</a>
+<a class="nb" href="unit4.html">U4</a>
+<a class="nb" href="unit5.html">U5</a>
+<a class="nb" href="unit6.html">U6</a>
+<a class="nb" href="unit7.html">U7</a>
+<a class="nb" href="unit8.html">U8</a>
+<a class="nb" href="fluency.html">⚡ Fluency</a>
+<a class="nb" href="volume.html">📦 Vol</a>
 </div>
 </nav>
-
 <div class="page-wrap">
-
 <div class="page-hdr">
-  <h1>Unit 2: Exponents & Scientific Notation</h1>
-  <p>Exponent Rules · Scientific Notation · NC.8.EE.1 · NC.8.EE.3 · NC.8.EE.4</p>
+<h1>Unit 2: Exponents & Scientific Notation</h1>
+<p>Exponent Rules · Scientific Notation · NC.8.EE.1 · NC.8.EE.3 · NC.8.EE.4</p>
 </div>
-
 <div class="tabs">
-  <button class="tab-btn active" onclick="openTab('t-std',this)">📋 Standards</button>
-  <button class="tab-btn" onclick="openTab('t-21',this)">2.1 Exponent Rules</button>
-  <button class="tab-btn" onclick="openTab('t-22',this)">2.2 Scientific Notation</button>
-  <button class="tab-btn" onclick="openTab('t-2rev',this)">📝 Review & Error Analysis</button>
+<button class="tab-btn active" onclick="openTab('t-std',this)">📋 Standards</button>
+<button class="tab-btn" onclick="openTab('t-21',this)">2.1 Exponent Rules</button>
+<button class="tab-btn" onclick="openTab('t-22',this)">2.2 Scientific Notation</button>
+<button class="tab-btn" onclick="openTab('t-2rev',this)">📝 Review & Error Analysis</button>
 </div>
-
 <div id="t-std" class="tab-pane active">
 <div class="lesson-section" style="border-color:#FFC107">
 <h2 style="color:#FFC107">📋 NC Standards Addressed</h2>
@@ -189,12 +169,10 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <li><strong style="color:#FFC107">NC.8.EE.4</strong> – Perform operations with numbers expressed in scientific notation.</li>
 </ul></div>
 </div>
-
 </div>
 <div id="t-21" class="tab-pane">
 <div class="lesson-section" style="border-color:#FFC107">
 <h2 style="color:#FFC107">2.1 Exponent Rules</h2>
-
 <table class="master-table">
 <tr><th style="width:18%">Rule Name</th><th style="width:28%">Formula</th><th style="width:27%">Simple Base Examples</th><th style="width:27%">Monomial Examples</th></tr>
 <tr>
@@ -235,47 +213,39 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 </tr>
 </table>
 </div>
-
 </div>
 <div id="t-22" class="tab-pane">
 <div class="lesson-section" style="border-color:#FFC107">
 <h2 style="color:#FFC107">2.2 Scientific Notation</h2>
 <div class="key-concept"><strong>🔑 FORMAT:</strong> a × 10<sup>n</sup> where 1 ≤ a < 10 (only ONE digit before decimal!)</div>
-
 <div class="lesson-notes"><ul>
 <li><strong>Large numbers → Positive exponent</strong> (move decimal LEFT): 45,000 = 4.5 × 10⁴</li>
 <li><strong>Small numbers → Negative exponent</strong> (move decimal RIGHT): 0.0067 = 6.7 × 10⁻³</li>
 </ul></div>
-
 <h3 style="color:#22AC00">⭐ MULTIPLYING Scientific Notation</h3>
 <div class="key-concept"><strong>🔑 MULTIPLY RULE:</strong><br>
 1. <span style="color:#FFC107">MULTIPLY</span> the coefficients (the a-values)<br>
 2. <span style="color:#FFC107">ADD</span> the exponents<br>
 3. Adjust if coefficient is not between 1 and 10</div>
-
 <div class="example-box"><h4>Example: (3 × 10⁴) × (2 × 10⁵)</h4>
 <div class="example-step">Multiply coefficients: 3 × 2 = 6</div>
 <div class="example-step">ADD exponents: 4 + 5 = 9</div>
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Answer: 6 × 10⁹ ✓ (no adjustment needed)</div>
 </div>
-
 <h3 style="color:#1E2D4F">⭐ DIVIDING Scientific Notation</h3>
 <div class="key-concept"><strong>🔑 DIVIDE RULE:</strong><br>
 1. <span style="color:#FFC107">DIVIDE</span> the coefficients (the a-values)<br>
 2. <span style="color:#FFC107">SUBTRACT</span> the exponents<br>
 3. Adjust if coefficient is not between 1 and 10</div>
-
 <div class="example-box"><h4>Example: (8 × 10⁶) ÷ (4 × 10²)</h4>
 <div class="example-step">Divide coefficients: 8 ÷ 4 = 2</div>
 <div class="example-step">SUBTRACT exponents: 6 - 2 = 4</div>
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Answer: 2 × 10⁴ ✓</div>
 </div>
-
 <h3 style="color:#FFC107">⚠️ Adjustment Rules (Know BEFORE doing problems!)</h3>
 <div class="warning-box"><strong>⚠️ ADJUSTMENT RULES:</strong><br>
 • If coefficient ≥ 10: Move decimal LEFT, <span style="color:#22AC00">ADD 1</span> to exponent<br>
 • If coefficient < 1: Move decimal RIGHT, <span style="color:#1E2D4F">SUBTRACT 1</span> from exponent</div>
-
 <div class="example-box"><h4>Example needing adjustment: (5 × 10³) × (4 × 10²)</h4>
 <div class="example-step">Multiply coefficients: 5 × 4 = 20</div>
 <div class="example-step">ADD exponents: 3 + 2 = 5</div>
@@ -284,7 +254,6 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step">Adjust: 20 = 2.0 × 10¹, so add 1 to exponent</div>
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Final: 2.0 × 10⁶ ✓</div>
 </div>
-
 <div class="example-box"><h4>Example needing adjustment: (3.6 × 10⁸) ÷ (9 × 10²)</h4>
 <div class="example-step">Divide coefficients: 3.6 ÷ 9 = 0.4</div>
 <div class="example-step">SUBTRACT exponents: 8 - 2 = 6</div>
@@ -293,7 +262,6 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step">Adjust: 0.4 = 4 × 10⁻¹, so subtract 1 from exponent</div>
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Final: 4 × 10⁵ ✓</div>
 </div>
-
 <h3 style="color:#FFC107">Word Problems with Scientific Notation</h3>
 <div class="example-box"><h4>🚀 Problem: Space Travel</h4>
 <div class="example-step" style="color:#1a1a24">Distance to Mars: 2.25 × 10⁸ km. Spacecraft speed: 5 × 10⁴ km/hr. How long to reach Mars?</div>
@@ -304,7 +272,6 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step">Result: 0.45 × 10⁴ → Adjust to 4.5 × 10³</div>
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Answer: 4.5 × 10³ hours (4,500 hours) ✓</div>
 </div>
-
 <div class="example-box"><h4>🦠 Problem: Bacteria Growth</h4>
 <div class="example-step" style="color:#1a1a24">A petri dish has 3 × 10⁴ bacteria. Each bacterium splits into 2, and this happens 4 times. How many bacteria total?</div>
 <div class="example-step">Multiply by 2 four times = 2⁴ = 16</div>
@@ -313,7 +280,6 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step">Add exponents: 4 + 1 = 5</div>
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Answer: 4.8 × 10⁵ bacteria ✓</div>
 </div>
-
 <div class="example-box"><h4>💻 Problem: Computer Storage</h4>
 <div class="example-step" style="color:#1a1a24">A hard drive has 2 × 10¹² bytes. A photo is 5 × 10⁶ bytes. How many photos can it store?</div>
 <div class="example-step">Photos = Total ÷ Photo size</div>
@@ -324,9 +290,7 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step" style="background:rgba(34,172,0,0.2)">Answer: 4 × 10⁵ photos (400,000 photos) ✓</div>
 </div>
 </div>
-
 </div>
-
 <div id="t-2rev" class="tab-pane">
 <div class="lesson-section" style="border-color:#1E2D4F">
 <h3 style="color:#1E2D4F">📝 Review: Worked Examples &amp; Error Analysis</h3>
@@ -354,26 +318,21 @@ nav.top-nav{background:#1E2D4F;padding:10px 14px;position:sticky;top:0;z-index:1
 <div class="example-step" style="background:rgba(34,172,0,0.12);border-left:4px solid #22AC00;border-radius:4px"><strong style="color:#22AC00">✓ Fix:</strong> Small number → NEGATIVE exponent. Correct: 4.5 × 10⁻³</div>
 <div class="example-step" style="background:rgba(255,193,7,0.1);font-style:italic;font-family:Inter,sans-serif">💡 Numbers less than 1 always have negative exponents in scientific notation.</div>
 </div>
-
 </div>
 </div>
-
 <div class="practice-cta">
-  <div class="cta-title">🎯 Ready to Practice?</div>
-  <div class="cta-desc">Test your skills with interactive problems and a PDF worksheet with answer key!</div>
-  <a href="unit2_practice.html">Go to Unit 2 Practice →</a>
+<div class="cta-title">🎯 Ready to Practice?</div>
+<div class="cta-desc">Test your skills with interactive problems and a PDF worksheet with answer key!</div>
+<a href="unit2_practice.html">Go to Unit 2 Practice →</a>
 </div>
-
 <div class="practice-cta">
-  <div class="cta-title">🎮 Interactive Games &amp; Activities</div>
-  <div class="cta-desc">Self-paced games that reinforce exponents and scientific notation</div>
-  <a href="exponent-solitaire.html" target="_blank">🃏 Exponent Solitaire →</a>
-  <a href="specimen-19.html" target="_blank">👽 Specimen-19 RPG →</a>
-  <a href="orion-7.html" target="_blank">🛰️ Orion-7: The Anomaly →</a>
+<div class="cta-title">🎮 Interactive Games &amp; Activities</div>
+<div class="cta-desc">Self-paced games that reinforce exponents and scientific notation</div>
+<a href="exponent-dash.html" target="_blank">⚡ Exponent Dash →</a>
+<a href="specimen-19.html" target="_blank">👽 Specimen-19 RPG →</a>
+<a href="orion-7.html" target="_blank">🛰️ Orion-7: The Anomaly →</a>
 </div>
-
 </div>
-
 <script>
 function openTab(id, btn) {
   document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
@@ -382,7 +341,6 @@ function openTab(id, btn) {
   btn.classList.add('active');
   window.scrollTo({ top: document.querySelector('.tabs').offsetTop - 60, behavior: 'smooth' });
 }
-
 function chkAns(btn,correct){
   var parent=btn.closest('.check-question');
   var buttons=parent.querySelectorAll('.check-btn');
@@ -424,24 +382,22 @@ function chkAns(btn,correct){
 #kf-send:disabled{opacity:.5;cursor:not-allowed;}
 @media(max-width:480px){#kf-tutor-panel{width:calc(100vw - 32px);right:-8px;}}
 </style>
-
 <div id="kf-tutor-bubble">
-  <div id="kf-tutor-panel">
-    <div class="kf-header">
-      <div class="kf-avatar">🦅</div>
-      <div><h3>Kingfisher Tutor</h3><p>IC IMAGINE MATH HELPER</p></div>
-    </div>
-    <div id="kf-messages">
-      <div class="kf-msg bot">Hi! I'm your Kingfisher Tutor 🦅 Ask me anything about the math on this page — I'll give you hints and help you think through it!</div>
-    </div>
-    <div class="kf-input-row">
-      <input id="kf-input" type="text" placeholder="Ask a math question..." onkeydown="if(event.key==='Enter')kfSend()">
-      <button id="kf-send" onclick="kfSend()">Send</button>
-    </div>
-  </div>
-  <button id="kf-tutor-toggle" onclick="kfToggle()" title="Kingfisher Tutor">🦅</button>
+<div id="kf-tutor-panel">
+<div class="kf-header">
+<div class="kf-avatar">🦅</div>
+<div><h3>Kingfisher Tutor</h3><p>IC IMAGINE MATH HELPER</p></div>
 </div>
-
+<div id="kf-messages">
+<div class="kf-msg bot">Hi! I'm your Kingfisher Tutor 🦅 Ask me anything about the math on this page — I'll give you hints and help you think through it!</div>
+</div>
+<div class="kf-input-row">
+<input id="kf-input" type="text" placeholder="Ask a math question..." onkeydown="if(event.key==='Enter')kfSend()">
+<button id="kf-send" onclick="kfSend()">Send</button>
+</div>
+</div>
+<button id="kf-tutor-toggle" onclick="kfToggle()" title="Kingfisher Tutor">🦅</button>
+</div>
 <script>
 (function(){
   var kfOpen=false, kfHistory=[];
@@ -501,6 +457,5 @@ function chkAns(btn,correct){
 })();
 </script>
 <!-- ═══ END KINGFISHER AI TUTOR ═══ -->
-
 </body>
 </html>
