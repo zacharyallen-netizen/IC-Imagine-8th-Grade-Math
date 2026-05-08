@@ -433,7 +433,7 @@
   </div>
 </div>
 
-<div id="commander">Tap the matching answer. Drag or move to aim. Press P to pause.</div>
+<div id="commander">Tap a number that solves an equation. P or Esc pauses.</div>
 
 <div id="overlay">
   <div class="overlay-card">
@@ -588,8 +588,15 @@
     musicTimer = Math.max(0.13, 0.34 - state.level * 0.03);
   }
 
+  function formatEquation(a, op, b) {
+    const symbols = { "+": "+", "-": "−", "*": "×", "/": "÷" };
+    const aStr = a < 0 ? `(${a})` : `${a}`;
+    const bStr = b < 0 ? `(${b})` : `${b}`;
+    return `${aStr} ${symbols[op]} ${bStr}`;
+  }
+
   function createEquation(level) {
-    const ops = level < 2 ? ["+", "-"] : level < 4 ? ["+", "-", "x"] : ["+", "-", "x", "/"];
+    const ops = level < 2 ? ["+", "-"] : level < 4 ? ["+", "-", "*"] : ["+", "-", "*", "/"];
     let a;
     let b;
     let op;
@@ -603,16 +610,25 @@
 
       if (op === "+") answer = a + b;
       if (op === "-") answer = a - b;
-      if (op === "x") answer = a * b;
+      if (op === "*") {
+        // Keep multiplication answers reasonable for 8th grade
+        a = randomInt(-12, 12);
+        b = randomInt(-12, 12);
+        answer = a * b;
+      }
       if (op === "/") {
-        const divisor = randomInt(-10, 10) || 2;
+        // Use non-trivial divisors (skip ±1) to avoid boring problems like 12 ÷ 1
+        let divisor = 0;
+        while (divisor === 0 || divisor === 1 || divisor === -1) {
+          divisor = randomInt(-10, 10);
+        }
         answer = randomInt(-9, 9);
         a = answer * divisor;
         b = divisor;
       }
 
-      if (Number.isInteger(answer) && answer >= -75 && answer <= 75 && Math.abs(answer) + Math.abs(a) + Math.abs(b) > 0) {
-        return { text: `${a} ${op} ${b}`, answer, solved: false, flash: 0 };
+      if (Number.isInteger(answer) && answer >= -100 && answer <= 100 && Math.abs(a) + Math.abs(b) > 0) {
+        return { text: formatEquation(a, op, b), answer, solved: false, flash: 0 };
       }
     }
 
@@ -734,12 +750,41 @@
     });
   }
 
+  function clearSolvedBoxes(equationIndex, exceptBox) {
+    state.belts.forEach((belt) => {
+      belt.boxes.forEach((b) => {
+        if (b !== exceptBox && b.equationIndex === equationIndex) {
+          b.correct = false;
+          b.equationIndex = -1;
+          b.value = getDistractor();
+          b.hue = randomInt(0, 2);
+        }
+      });
+    });
+  }
+
   function refillBox(box, belt) {
     const unsolved = state.equations
       .map((eq, index) => ({ eq, index }))
       .filter((item) => !item.eq.solved);
-    const chance = Math.min(0.42, 0.16 + state.level * 0.035);
-    const choice = unsolved.length && Math.random() < chance ? unsolved[randomInt(0, unsolved.length - 1)] : null;
+
+    // Find equations whose answer isn't currently visible anywhere
+    const visibleEquationIndices = new Set();
+    state.belts.forEach((b) => b.boxes.forEach((bx) => {
+      if (bx !== box && bx.correct) visibleEquationIndices.add(bx.equationIndex);
+    }));
+    const orphaned = unsolved.filter((item) => !visibleEquationIndices.has(item.index));
+
+    let choice = null;
+    if (orphaned.length > 0) {
+      // Always re-seed an orphaned answer so the player can always make progress
+      choice = orphaned[randomInt(0, orphaned.length - 1)];
+    } else {
+      const chance = Math.min(0.42, 0.16 + state.level * 0.035);
+      if (unsolved.length && Math.random() < chance) {
+        choice = unsolved[randomInt(0, unsolved.length - 1)];
+      }
+    }
 
     if (choice) {
       box.value = choice.eq.answer;
@@ -962,6 +1007,7 @@
 
   function correctHit(box, x, y) {
     const equation = state.equations[box.equationIndex];
+    const solvedIndex = box.equationIndex;
     equation.solved = true;
     equation.flash = 1;
     const record = state.problemHistory.find((item) => item.id === equation.id);
@@ -979,6 +1025,7 @@
     box.correct = false;
     box.equationIndex = -1;
     box.hitPulse = 1;
+    clearSolvedBoxes(solvedIndex, box);
     spawnBurst(x, y, colors.green, 24, 1.2);
     addFloater(`+${gained}`, x, y, colors.green);
     commander.textContent = multiplier > 1 ? `Combo x${multiplier}. Keep it clean.` : "Correct hit.";
@@ -1000,7 +1047,13 @@
     if (box) box.hitPulse = 1;
     spawnBurst(x, y, colors.red, 20, 1);
     addFloater("-ARMOR", x, y, colors.red);
-    commander.textContent = box ? `That target was ${box.value}. Recheck the equations.` : "Shot missed the grid.";
+    if (box) {
+      const firstOpen = state.equations.find((eq) => !eq.solved);
+      const hint = firstOpen ? ` Try ${firstOpen.text}.` : "";
+      commander.textContent = `${box.value} isn't a current answer.${hint}`;
+    } else {
+      commander.textContent = "Shot missed the grid.";
+    }
     chord([180, 130], 0.09, "sawtooth", 0.03);
     if (state.hearts <= 0) endGame(false);
   }
@@ -1262,9 +1315,16 @@
     `;
     overlay.style.display = "grid";
     document.getElementById("restartBtn").addEventListener("click", startGame);
-    document.getElementById("quietBtn").addEventListener("click", () => {
-      if (audioCtx) audioCtx.close();
-      audioCtx = null;
+    const quietBtn = document.getElementById("quietBtn");
+    quietBtn.addEventListener("click", () => {
+      if (!audioCtx) return;
+      if (audioCtx.state === "running") {
+        audioCtx.suspend();
+        quietBtn.textContent = "Unmute";
+      } else {
+        audioCtx.resume();
+        quietBtn.textContent = "Mute";
+      }
     });
   }
 
@@ -1340,7 +1400,7 @@
 
   window.addEventListener("keydown", (event) => {
     if (event.key.toLowerCase() === "p") togglePause();
-    if (event.key === "Escape" && state.running) endGame(false);
+    if (event.key === "Escape" && state.running) togglePause();
   });
 
   window.addEventListener("resize", resize);
